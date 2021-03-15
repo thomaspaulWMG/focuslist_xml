@@ -1,0 +1,30 @@
+{55665a93-a7a0-4ba2-9a56-8c4b396b6153} - WM_Meeting_Dt
+{fd56cdb7-cd25-4040-91de-5ce25a6f0daf} - WM_AnR_Manager  alt {474acef3-a554-4c48-916a-c7c3441663d0}
+{8b9f8e3f-6ad0-4557-8a8a-7fc7118ba9eb} - WM_MPN_Sampling alt 0e0c9e6f-d527-42cf-b2d3-a81c412dba82
+{5860653c-1f91-4082-9809-371b19900037}Project Code
+{1af222ff-ca61-44e0-bc9c-0ee053937bfd}FC
+{da1b62d4-ae23-4f67-8bd5-6a8fabcf8e81}LC
+{54220d3e-3d3b-4abc-99b9-bb40eb665e6c}Master
+{71a89bb6-3552-4b59-8170-2256af8972bc}Cover
+{06cf6e2b-61d4-45c5-bfe1-c71247acc746}RelReq
+{11b1e45d-54bc-4f05-abf5-83631310e295}Dlvy
+{e0c1482b-ea91-4da8-b610-c5739632122b}CESchedul
+{d8f34deb-f974-4167-8551-73a5d34fa49e}USSchedul
+{46f6e63d-48c6-4727-b51e-0a5a0ae4dde3}PreOrder
+{aab1f1bb-3f1e-46b9-b89a-3b5f982b926b}Takedown
+{516b957a-0178-4903-b8ec-f9ab5996fa46}Pricing
+{ac2e6138-90da-4185-a2e3-17231d9c8f9c}ProdGrp
+{6bf775ae-5fb2-4f8b-8095-b74637c405d6}FirstOrd
+{fd971e66-8fc0-42c4-bc0c-a1b7ebc66c98}COP
+{1b623386-40e6-4e41-9517-08f275ac8780}MPN_Sampled
+{5d492832-ba77-4843-94f1-f2a6e3deb84a}
+{6dd718e1-b89f-4444-b890-d92d6d026323}
+{637c7eb6-bf87-4f46-ba15-3a962bb596cb}
+{98eb94f7-c15d-47cd-91dc-d94a571d0982}
+{cf312942-08a4-44d2-accb-dc5fac4e4dbc}
+{95a18d97-6c33-4323-b96c-912b454aee8e}
+{eeee09f9-6b67-48d6-8f7a-967009476084}
+{ec2190f8-ec11-4b6a-a3ea-8a6d17a6537b}
+{3311c208-a6b5-4737-9c7c-7613495b48a5}
+{2c164836-d34a-4d60-8cbb-93b1ddedb1b0}
+{52ad8eb3-8eb8-44ff-9ba7-efe2d3b7a82d}

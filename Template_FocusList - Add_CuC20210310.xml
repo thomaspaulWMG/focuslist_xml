@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<pnp:Provisioning xmlns:pnp="http://schemas.dev.office.com/PnP/2018/05/ProvisioningSchema">
+  <pnp:Preferences Generator="OfficeDevPnP.Core, Version=2.27.1806.0, Culture=neutral, PublicKeyToken=null" />
+  <pnp:Templates ID="CONTAINER-Warner_FocusList_Child">
+    <pnp:ProvisioningTemplate ID="Warner_FocusList_CuC" Version="1.0">
+		<pnp:SiteFields>
+			<!--Felder-->
+			<!-- Text -->
+            <Field ID="{33278817-2B6F-4B7E-8017-7F38E26181EB}" Group="Warner Music" Type="Text" Name="WM_ExYouTubeID" DisplayName="YouTube ID"/>
+            <Field ID="{5d492832-ba77-4843-94f1-f2a6e3deb84a}" Group="Warner Music" Type="Text" Name="WM_FocusTrack" DisplayName="Focus Track"/>
+            <Field ID="{637c7eb6-bf87-4f46-ba15-3a962bb596cb}" Group="Warner Music" Type="Text" Name="WM_Hardfacts" DisplayName="Hardfacts"/>
+			<!-- Link -->
+            <Field ID="{98eb94f7-c15d-47cd-91dc-d94a571d0982}" Group="Warner Music" Type="URL" Name="WM_ListeningLink" DisplayName="Listening Link" Format="Hyperlink"/>
+            <Field ID="{cf312942-08a4-44d2-accb-dc5fac4e4dbc}" Group="Warner Music" Type="URL" Name="WM_PressShotLink" DisplayName="Press Shot Link" Format="Hyperlink"/>
+            <!-- Note -->
+            <Field ID="{6dd718e1-b89f-4444-b890-d92d6d026323}" Group="Warner Music" Type="Note" Name="WM_Softfacts" DisplayName="Softfacts" NumLines="3"/>
+			<!-- Date -->
+			<!-- Note -->
+			<!-- Person -->
+			<!-- Choice -->
+			<!-- Lookup -->
+			<!-- Number -->
+			<!-- Taxonomy -->
+			<!-- Currency -->
+			<!-- Boolean -->
+		</pnp:SiteFields>
+		<pnp:ContentTypes>
+			<pnp:ContentType ID="0x010067C49BB0E01A471B82828217BFBDE01C" Name="FocusList item" Description="" Group="Warner Music">
+				<pnp:FieldRefs>
+					<pnp:FieldRef ID="33278817-2B6F-4B7E-8017-7F38E26181EB" />
+                    <pnp:FieldRef ID="5d492832-ba77-4843-94f1-f2a6e3deb84a" />
+                    <pnp:FieldRef ID="637c7eb6-bf87-4f46-ba15-3a962bb596cb" />
+                    <pnp:FieldRef ID="98eb94f7-c15d-47cd-91dc-d94a571d0982" />
+                    <pnp:FieldRef ID="cf312942-08a4-44d2-accb-dc5fac4e4dbc" />
+                    <pnp:FieldRef ID="6dd718e1-b89f-4444-b890-d92d6d026323" />
+				</pnp:FieldRefs>
+			</pnp:ContentType>
+			<pnp:ContentType ID="0x01005489D1E62B0B43AAAFC23FCA4D25A8B0" Name="FocusList item Sub" Description="" Group="Warner Music">
+				<pnp:FieldRefs>
+					<pnp:FieldRef ID="33278817-2B6F-4B7E-8017-7F38E26181EB" />
+                    <pnp:FieldRef ID="5d492832-ba77-4843-94f1-f2a6e3deb84a" />
+                    <pnp:FieldRef ID="637c7eb6-bf87-4f46-ba15-3a962bb596cb" />
+                    <pnp:FieldRef ID="98eb94f7-c15d-47cd-91dc-d94a571d0982" />
+                    <pnp:FieldRef ID="cf312942-08a4-44d2-accb-dc5fac4e4dbc" />
+                    <pnp:FieldRef ID="6dd718e1-b89f-4444-b890-d92d6d026323" />
+				</pnp:FieldRefs>
+			</pnp:ContentType>
+		</pnp:ContentTypes>
+		<pnp:Lists>
+			<pnp:ListInstance Title="Focus List" OnQuickLaunch="true" TemplateType="100" Url="Lists/FocusList" RemoveExistingContentTypes="true" ContentTypesEnabled="true" EnableFolderCreation="false" >
+				<pnp:Views>
+					<View Name="{CE02DEE9-ABDC-4644-9664-89E0BA72B3C7}" Type="HTML" DisplayName="CuC_Master" Url="{site}/Lists/FocusList/CuC_Master.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+						<Query />
+						<ViewFields>
+						  <FieldRef Name="WM_Year" />
+						  <FieldRef Name="WM_KW" />
+						  <FieldRef Name="WM_Artist" />
+						  <FieldRef Name="Title" />
+						  <FieldRef Name="WM_ReleaseDate" />
+						  <FieldRef Name="WM_Genre" />
+						  <FieldRef Name="WM_Configration" />
+						  <FieldRef Name="WM_Label" />
+						  <FieldRef Name="WM_GPID" />
+						  <FieldRef Name="WM_ExAppleID" />
+						  <FieldRef Name="WM_ExAmazonID" />
+						  <FieldRef Name="WM_ExYouTubeID" />
+						  <FieldRef Name="WM_KatStreaming" />
+						  <FieldRef Name="WM_FocusTrack" />
+						  <FieldRef Name="WM_Hardfacts" />
+						  <FieldRef Name="WM_Softfacts" />
+						  <FieldRef Name="WM_ListeningLink" />
+						  <FieldRef Name="WM_PressShotLink" />
+						</ViewFields>
+						<RowLimit Paged="TRUE">30</RowLimit>
+						<Aggregations Value="Off" />
+						<JSLink>clienttemplates.js</JSLink>
+						<ViewData />
+					  </View>
+				  </pnp:Views>
+				<pnp:FieldRefs>
+					<pnp:FieldRef ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Required="false" />
+				</pnp:FieldRefs>
+			</pnp:ListInstance>
+		</pnp:Lists>
+    </pnp:ProvisioningTemplate>
+  </pnp:Templates>
+</pnp:Provisioning>

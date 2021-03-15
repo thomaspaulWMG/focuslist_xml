@@ -1,0 +1,798 @@
+<?xml version="1.0"?>
+<pnp:Provisioning xmlns:pnp="http://schemas.dev.office.com/PnP/2018/05/ProvisioningSchema">
+  <pnp:Preferences Generator="OfficeDevPnP.Core, Version=2.27.1806.0, Culture=neutral, PublicKeyToken=null" />
+  <pnp:Templates ID="CONTAINER-Warner_FocusList">
+    <pnp:ProvisioningTemplate ID="Warner_FocusList" Version="1.3">
+		<pnp:SiteFields>
+			<!--Felder-->
+			<!-- Text -->
+			<Field ID="{7D860573-AFD4-461F-B6E1-44D1D86768CC}" Group="Warner Music" Type="Text" Name="WM_Artist" DisplayName="Artist"/>
+			<Field ID="{6D648BDC-98E9-493A-BA7D-BA9F57AF6CD3}" Group="Warner Music" Type="Text" Name="WM_GPSStatus" DisplayName="GPS Status"/>
+			<Field ID="{89ADEFDC-FDFE-4F35-98D9-8ACF84305DF7}" Group="Warner Music" Type="Text" Name="WM_DIDSpotify" DisplayName="Spotify Batch-ID"/>
+			<Field ID="{BBFED672-EB2C-4D39-A24D-0B075ED7091B}" Group="Warner Music" Type="Text" Name="WM_DIDApple" DisplayName="Apple Batch-ID"/>
+			<Field ID="{D3BD98EA-EFC3-4D9A-B50C-BCCD664FE7DE}" Group="Warner Music" Type="Text" Name="WM_DIDAmazon" DisplayName="Amazon Batch-ID"/>
+			<Field ID="{7A82AB0F-47C6-4C40-A2B5-FB258293DBF0}" Group="Warner Music" Type="Text" Name="WM_DIDDeezer" DisplayName="Deezer Batch-ID"/>
+			<Field ID="{771446D5-8E0A-4A51-B34E-522C7D53D7F3}" Group="Warner Music" Type="Text" Name="WM_ExSpotifyID" DisplayName="Spotify ID"/>
+			<Field ID="{B654A00F-E151-42AE-B19A-16EB0CD96BEE}" Group="Warner Music" Type="Text" Name="WM_ExAppleID" DisplayName="Apple ID"/>
+			<Field ID="{0A4873CC-352F-4B1E-BBE8-2911624BCA55}" Group="Warner Music" Type="Text" Name="WM_ExAmazonID" DisplayName="Amazon ID"/>
+			<Field ID="{529B1510-9C85-426C-87C2-4278B8747D6E}" Group="Warner Music" Type="Text" Name="WM_ExDeezerID" DisplayName="Deezer ID"/>
+			<Field ID="{E24751A3-BFF5-41C8-A019-FC8D0248CB60}" Group="Warner Music" Type="Text" Name="WM_StatusConfi" DisplayName="Status (including CONFIDENTIAL information if necessary)"/>
+			<Field ID="{F4D172CE-5BED-46C4-B93A-A357F1829743}" Group="Warner Music" Type="Text" Name="WM_PC" DisplayName="PC"/>
+			<Field ID="{4A02471C-6C86-4C37-9087-DA50B54D1F0F}" Group="Warner Music" Type="Text" Name="WM_FC" DisplayName="FC"/>
+			<Field ID="{FEAE4AA7-4E85-4F1A-B86F-1B734D945C95}" Group="Warner Music" Type="Text" Name="WM_Matrix" DisplayName="Matrix"/>
+			<Field ID="{9ED7E1FF-9F73-48FC-BDB1-19CFBD9A77EA}" Group="Warner Music" Type="Text" Name="WM_ISRC" DisplayName="ISRC"/>
+			<Field ID="{776852CE-9454-4A4E-9660-2BB14EAFBE2F}" Group="Warner Music" Type="Text" Name="WM_GPID" DisplayName="GPID"/>
+			<Field ID="{D8594AA3-F310-4C14-BA7F-9471984883B8}" Group="Warner Music" Type="Text" Name="WM_ReleaseDateComment" DisplayName="Release Date Comment"/>
+			<Field ID="{66FADB3B-3B2C-403D-9A75-657A1A99E6E6}" Group="Warner Music" Type="Text" Name="WM_SortOrder" DisplayName="Sort Order"/>
+			<!-- Version 2
+			<Field ID="{89794122-C73B-4F74-944B-6127EE0D9796}" Group="Warner Music" Type="Text" Name="WM_Pricing" DisplayName="Pricing"/>
+			<Field ID="{33278817-2B6F-4B7E-8017-7F38E26181EB}" Group="Warner Music" Type="Text" Name="WM_UPC" DisplayName="Youtube ID (external reference, shop)"/>
+			-->
+			<!-- Link -->
+			<Field ID="{B8CE7B7B-E9EA-43A1-BE82-B8CEA8ACFD79}" Group="Warner Music" Type="URL" Name="WM_LinkStorybox" DisplayName="Storybox Link" Format="Hyperlink"/>
+			<Field ID="{9611E8C3-1BED-4CD2-9206-750FE26102BB}" Group="Warner Music" Type="URL" Name="WM_LinkCoverart" DisplayName="Coverart Link" Format="Hyperlink"/>
+			<Field ID="{7109E4EC-91E8-4971-BEB9-66DBB45546C2}" Group="Warner Music" Type="URL" Name="WM_LinkAudio" DisplayName="Audio Link" Format="Hyperlink"/>
+			<!-- Date -->
+			<Field ID="{9BE42148-74F0-4E1F-A143-68264E0ED42C}" Group="Warner Music" Type="DateTime" Name="WM_ReleaseDate" DisplayName="Release Date" Format="DateTime"/>
+			<Field ID="{1B8B0484-7066-4890-84EF-86ED8E9A59AD}" Group="Warner Music" Type="DateTime" Name="WM_KWEndDate" DisplayName="KW Enddatum" Format="DateOnly"/>
+			<!-- Version 2
+			<Field ID="{DB2ED5D6-E577-4818-8ACA-2F9ABC5AFDD8}" Group="Warner Music" Type="DateTime" Name="WM_PreOrder" DisplayName="Pre-Order" Format="DateOnly"/>
+			<Field ID="{33340025-E535-4B65-BF9B-073C4CD9707F}" Group="Warner Music" Type="DateTime" Name="WM_TakeDown" DisplayName="TakeDown" Format="DateOnly"/>
+			-->
+			<!-- Note -->
+			<Field ID="{39410810-DD93-42C6-87F7-02237900619C}" Group="Warner Music" Type="Note" Name="WM_Comments" DisplayName="Comments"/>
+			<Field ID="{BD473872-B8E9-424C-B49C-7E8F76798D1A}" Group="Warner Music" Type="Note" Name="WM_NotesINT" DisplayName="INT Notes"/>
+			<!-- Person -->
+			<Field ID="{17F4817B-1344-4D7F-976B-FE98A8F12BFA}" Group="Warner Music" Type="User" Name="WM_BrandManager" DisplayName="BrandManager"/>
+			<!-- Choice -->
+			<Field ID="{DB957483-DD86-4DAE-8C35-D044E51FF7FF}" Group="Warner Music" Type="Choice" Name="WM_KW" DisplayName="KW">
+				<CHOICES>
+					<CHOICE>X</CHOICE>
+					<CHOICE>1</CHOICE>
+					<CHOICE>2</CHOICE>
+					<CHOICE>3</CHOICE>
+					<CHOICE>4</CHOICE>
+					<CHOICE>5</CHOICE>
+					<CHOICE>6</CHOICE>
+					<CHOICE>7</CHOICE>
+					<CHOICE>8</CHOICE>
+					<CHOICE>9</CHOICE>
+					<CHOICE>10</CHOICE>
+					<CHOICE>11</CHOICE>
+					<CHOICE>12</CHOICE>
+					<CHOICE>13</CHOICE>
+					<CHOICE>14</CHOICE>
+					<CHOICE>15</CHOICE>
+					<CHOICE>16</CHOICE>
+					<CHOICE>17</CHOICE>
+					<CHOICE>18</CHOICE>
+					<CHOICE>19</CHOICE>
+					<CHOICE>20</CHOICE>
+					<CHOICE>21</CHOICE>
+					<CHOICE>22</CHOICE>
+					<CHOICE>23</CHOICE>
+					<CHOICE>24</CHOICE>
+					<CHOICE>25</CHOICE>
+					<CHOICE>26</CHOICE>
+					<CHOICE>27</CHOICE>
+					<CHOICE>28</CHOICE>
+					<CHOICE>29</CHOICE>
+					<CHOICE>30</CHOICE>
+					<CHOICE>31</CHOICE>
+					<CHOICE>32</CHOICE>
+					<CHOICE>33</CHOICE>
+					<CHOICE>34</CHOICE>
+					<CHOICE>35</CHOICE>
+					<CHOICE>36</CHOICE>
+					<CHOICE>37</CHOICE>
+					<CHOICE>38</CHOICE>
+					<CHOICE>39</CHOICE>
+					<CHOICE>40</CHOICE>
+					<CHOICE>41</CHOICE>
+					<CHOICE>42</CHOICE>
+					<CHOICE>43</CHOICE>
+					<CHOICE>44</CHOICE>
+					<CHOICE>45</CHOICE>
+					<CHOICE>46</CHOICE>
+					<CHOICE>47</CHOICE>
+					<CHOICE>48</CHOICE>
+					<CHOICE>49</CHOICE>
+					<CHOICE>50</CHOICE>
+					<CHOICE>51</CHOICE>
+					<CHOICE>52</CHOICE>
+				</CHOICES>
+				<Default>X</Default>
+			</Field>
+			<Field ID="{0F8C7390-D477-4850-BC20-125B789EBCED}" Group="Warner Music" Type="Choice" Name="WM_KatStreaming" DisplayName="STREAMING">
+				<CHOICES>
+					<CHOICE>A</CHOICE>
+					<CHOICE>B</CHOICE>
+					<CHOICE>C</CHOICE>
+					<CHOICE>D</CHOICE>
+					<CHOICE>x</CHOICE>
+				</CHOICES>
+				<Default>A</Default>
+			</Field>
+			<Field ID="{AD734767-158B-4124-B339-01ED2CBAFFEA}" Group="Warner Music" Type="Choice" Name="WM_KatMarketing" DisplayName="MARKETING">
+				<CHOICES>
+					<CHOICE>A</CHOICE>
+					<CHOICE>B</CHOICE>
+					<CHOICE>C</CHOICE>
+					<CHOICE>D</CHOICE>
+				</CHOICES>
+				<Default>A</Default>
+			</Field>
+			<Field ID="{DC8205CA-FD41-4340-BFE4-B75AE8021B29}" Group="Warner Music" Type="Choice" Name="WM_KatTV" DisplayName="TV">
+				<CHOICES>
+					<CHOICE>A</CHOICE>
+					<CHOICE>B</CHOICE>
+					<CHOICE>C</CHOICE>
+					<CHOICE>D</CHOICE>
+				</CHOICES>
+				<Default>A</Default>
+			</Field>
+			<Field ID="{348FA4C3-6F04-48A1-9226-F073F68D5DEC}" Group="Warner Music" Type="Choice" Name="WM_KatPrint" DisplayName="PRINT/ONLINE">
+				<CHOICES>
+					<CHOICE>A</CHOICE>
+					<CHOICE>B</CHOICE>
+					<CHOICE>C</CHOICE>
+					<CHOICE>D</CHOICE>
+					<CHOICE>Extern</CHOICE>
+				</CHOICES>
+				<Default>A</Default>
+			</Field>
+			<Field ID="{182F0F59-BF65-430C-AFEC-C0DE338C1178}" Group="Warner Music" Type="Choice" Name="WM_KatRadio" DisplayName="RADIO">
+				<CHOICES>
+					<CHOICE>A</CHOICE>
+					<CHOICE>B</CHOICE>
+					<CHOICE>C</CHOICE>
+					<CHOICE>D</CHOICE>
+					<CHOICE>Extern</CHOICE>
+				</CHOICES>
+				<Default>A</Default>
+			</Field>
+			<Field ID="{C2A6F2F0-F526-499F-8EA1-0B013BA45BE1}" Group="Warner Music" Type="Choice" Name="WM_KatPaid" DisplayName="PAID">
+				<CHOICES>
+					<CHOICE>A</CHOICE>
+					<CHOICE>B</CHOICE>
+					<CHOICE>C</CHOICE>
+					<CHOICE>D</CHOICE>
+				</CHOICES>
+				<Default>A</Default>
+			</Field>
+			<Field ID="{0BF73A02-0BF9-4FD4-AD6B-4102991FEC2F}" Group="Warner Music" Type="Choice" Name="WM_KatOwned" DisplayName="OWNED">
+				<CHOICES>
+					<CHOICE>A</CHOICE>
+					<CHOICE>B</CHOICE>
+					<CHOICE>C</CHOICE>
+					<CHOICE>D</CHOICE>
+				</CHOICES>
+				<Default>A</Default>
+			</Field>
+			<Field ID="{8F71DC6B-AA34-4835-A9EF-C0BB424C48BD}" Group="Warner Music" Type="Choice" Name="WM_Kat2Glory" DisplayName="2GLORY">
+				<CHOICES>
+					<CHOICE>A</CHOICE>
+					<CHOICE>B</CHOICE>
+					<CHOICE>C</CHOICE>
+					<CHOICE>D</CHOICE>
+				</CHOICES>
+				<Default>A</Default>
+			</Field>
+			<Field ID="{9A1D3B62-1CD5-4EF9-A4E0-B027FA488D3E}" Group="Warner Music" Type="Choice" Name="WM_LeadStories" DisplayName="Lead Stories">
+				<CHOICES>
+					<CHOICE>X</CHOICE>
+					<CHOICE>KW1</CHOICE>
+					<CHOICE>KW2</CHOICE>
+					<CHOICE>KW3</CHOICE>
+					<CHOICE>KW4</CHOICE>
+					<CHOICE>KW5</CHOICE>
+					<CHOICE>KW6</CHOICE>
+					<CHOICE>KW7</CHOICE>
+					<CHOICE>KW8</CHOICE>
+					<CHOICE>KW9</CHOICE>
+					<CHOICE>KW10</CHOICE>
+					<CHOICE>KW11</CHOICE>
+					<CHOICE>KW12</CHOICE>
+					<CHOICE>KW13</CHOICE>
+					<CHOICE>KW14</CHOICE>
+					<CHOICE>KW15</CHOICE>
+					<CHOICE>KW16</CHOICE>
+					<CHOICE>KW17</CHOICE>
+					<CHOICE>KW18</CHOICE>
+					<CHOICE>KW19</CHOICE>
+					<CHOICE>KW20</CHOICE>
+					<CHOICE>KW21</CHOICE>
+					<CHOICE>KW22</CHOICE>
+					<CHOICE>KW23</CHOICE>
+					<CHOICE>KW24</CHOICE>
+					<CHOICE>KW25</CHOICE>
+					<CHOICE>KW26</CHOICE>
+					<CHOICE>KW27</CHOICE>
+					<CHOICE>KW28</CHOICE>
+					<CHOICE>KW29</CHOICE>
+					<CHOICE>KW30</CHOICE>
+					<CHOICE>KW31</CHOICE>
+					<CHOICE>KW32</CHOICE>
+					<CHOICE>KW33</CHOICE>
+					<CHOICE>KW34</CHOICE>
+					<CHOICE>KW35</CHOICE>
+					<CHOICE>KW36</CHOICE>
+					<CHOICE>KW37</CHOICE>
+					<CHOICE>KW38</CHOICE>
+					<CHOICE>KW39</CHOICE>
+					<CHOICE>KW40</CHOICE>
+					<CHOICE>KW41</CHOICE>
+					<CHOICE>KW42</CHOICE>
+					<CHOICE>KW43</CHOICE>
+					<CHOICE>KW44</CHOICE>
+					<CHOICE>KW45</CHOICE>
+					<CHOICE>KW46</CHOICE>
+					<CHOICE>KW47</CHOICE>
+					<CHOICE>KW48</CHOICE>
+					<CHOICE>KW49</CHOICE>
+					<CHOICE>KW50</CHOICE>
+					<CHOICE>KW51</CHOICE>
+					<CHOICE>KW52</CHOICE>
+				</CHOICES>
+			</Field>
+			<!-- Version 2
+			<Field ID="{D9A9A082-BD77-475B-A6F7-6717F463C5CE}" Group="Warner Music" Type="Choice" Name="WM_PrioSpotify" DisplayName="Prio Spotify">
+				<CHOICES>
+					<CHOICE>A</CHOICE>
+					<CHOICE>B</CHOICE>
+					<CHOICE>C</CHOICE>
+					<CHOICE>D</CHOICE>
+				</CHOICES>
+				<Default>A</Default>
+			</Field>
+			<Field ID="{9A0DEB93-C4D0-46BB-B8FE-992032DEF802}" Group="Warner Music" Type="Choice" Name="WM_PrioApple" DisplayName="Prio Apple">
+				<CHOICES>
+					<CHOICE>A</CHOICE>
+					<CHOICE>B</CHOICE>
+					<CHOICE>C</CHOICE>
+					<CHOICE>D</CHOICE>
+				</CHOICES>
+				<Default>A</Default>
+			</Field>
+			<Field ID="{3F4DE2E3-6C19-4D65-AA09-B8614FBE6A74}" Group="Warner Music" Type="Choice" Name="WM_PrioDeezer" DisplayName="Prio Deezer">
+				<CHOICES>
+					<CHOICE>A</CHOICE>
+					<CHOICE>B</CHOICE>
+					<CHOICE>C</CHOICE>
+					<CHOICE>D</CHOICE>
+				</CHOICES>
+				<Default>A</Default>
+			</Field>
+			<Field ID="{34F4346E-0B23-43CC-B6BA-70666AAB3ABD}" Group="Warner Music" Type="Choice" Name="WM_PrioAmazon" DisplayName="Prio Amazon">
+				<CHOICES>
+					<CHOICE>A</CHOICE>
+					<CHOICE>B</CHOICE>
+					<CHOICE>C</CHOICE>
+					<CHOICE>D</CHOICE>
+				</CHOICES>
+				<Default>A</Default>
+			</Field>
+			<Field ID="{BBF18858-434C-4C8B-86B0-75FFBF651E2A}" Group="Warner Music" Type="Choice" Name="WM_PrioYoutube" DisplayName="Prio Youtube">
+				<CHOICES>
+					<CHOICE>A</CHOICE>
+					<CHOICE>B</CHOICE>
+					<CHOICE>C</CHOICE>
+					<CHOICE>D</CHOICE>
+				</CHOICES>
+				<Default>A</Default>
+			</Field>
+			<Field ID="{DE93CEA3-2CD5-4034-A05E-BD698233DA6F}" Group="Warner Music" Type="Choice" Name="WM_PrioNapster" DisplayName="Prio Napster">
+				<CHOICES>
+					<CHOICE>A</CHOICE>
+					<CHOICE>B</CHOICE>
+					<CHOICE>C</CHOICE>
+					<CHOICE>D</CHOICE>
+				</CHOICES>
+				<Default>A</Default>
+			</Field>
+			<Field ID="{F6927F26-4C24-4416-9FB0-63A705988270}" Group="Warner Music" Type="Choice" Name="WM_LC" DisplayName="LC">
+				<CHOICES>
+					<CHOICE>Ja</CHOICE>
+					<CHOICE>Nein</CHOICE>
+					<CHOICE>-</CHOICE>
+				</CHOICES>
+				<Default>-</Default>
+			</Field>
+			<Field ID="{85A6F47B-6A05-4419-8664-A2A07EED015F}" Group="Warner Music" Type="Choice" Name="WM_M" DisplayName="M">
+				<CHOICES>
+					<CHOICE>Ja</CHOICE>
+					<CHOICE>Nein</CHOICE>
+					<CHOICE>-</CHOICE>
+				</CHOICES>
+				<Default>-</Default>
+			</Field>
+			<Field ID="{2DEA6AE7-E96A-4103-9F65-48DC51E46277}" Group="Warner Music" Type="Choice" Name="WM_C" DisplayName="C">
+				<CHOICES>
+					<CHOICE>Ja</CHOICE>
+					<CHOICE>Nein</CHOICE>
+					<CHOICE>-</CHOICE>
+				</CHOICES>
+				<Default>-</Default>
+			</Field>
+			<Field ID="{A166469C-3269-44EC-8E1A-EB8C51EAB43C}" Group="Warner Music" Type="Choice" Name="WM_PE" DisplayName="PE">
+				<CHOICES>
+					<CHOICE>Ja</CHOICE>
+					<CHOICE>Nein</CHOICE>
+					<CHOICE>-</CHOICE>
+				</CHOICES>
+				<Default>-</Default>
+			</Field>
+			<Field ID="{8C67893F-186F-4BEF-BCAB-69D6FDF2B7F3}" Group="Warner Music" Type="Choice" Name="WM_D" DisplayName="D">
+				<CHOICES>
+					<CHOICE>Ja</CHOICE>
+					<CHOICE>Nein</CHOICE>
+					<CHOICE>-</CHOICE>
+				</CHOICES>
+				<Default>-</Default>
+			</Field>
+			<Field ID="{7857EB60-B07F-4CB2-8F58-04132EEC9389}" Group="Warner Music" Type="Choice" Name="WM_CS" DisplayName="CS">
+				<CHOICES>
+					<CHOICE>Ja</CHOICE>
+					<CHOICE>Nein</CHOICE>
+					<CHOICE>-</CHOICE>
+				</CHOICES>
+				<Default>-</Default>
+			</Field>
+			<Field ID="{125E8B1C-4FDC-42B0-A7CB-337CED6878E9}" Group="Warner Music" Type="Choice" Name="WM_IRI" DisplayName="IRI">
+				<CHOICES>
+					<CHOICE>Ja</CHOICE>
+					<CHOICE>Nein</CHOICE>
+					<CHOICE>-</CHOICE>
+				</CHOICES>
+				<Default>-</Default>
+			</Field>
+			-->
+			<Field ID="{E49903C0-2F62-471B-A6FB-CAA333AFA75C}" Group="Warner Music" Type="Choice" Name="WM_Readyness" DisplayName="Readyness">
+				<CHOICES>
+					<CHOICE>Ready</CHOICE>
+					<CHOICE>partly ready</CHOICE>
+					<CHOICE>not ready</CHOICE>
+				</CHOICES>
+			</Field>
+			<Field ID="{99BA0C74-4E65-4AC5-AB7B-76E9EB233699}" Group="Warner Music" Type="Choice" Name="WM_INTMeetings" DisplayName="INT-Meetings">
+				<CHOICES>
+					<CHOICE>-</CHOICE>
+					<CHOICE>International Music Meeting</CHOICE>
+					<CHOICE>Streaming Meeting</CHOICE>
+				</CHOICES>
+			</Field>
+			<Field ID="{AC343F5B-87D6-4A88-BE40-F25D77D01DFF}" Group="Warner Music" Type="Choice" Name="WM_StreamingUnit" DisplayName="Streaming Unit">
+				<CHOICES>
+					<CHOICE>C&amp;C</CHOICE>
+					<CHOICE>M&amp;B</CHOICE>
+				</CHOICES>
+			</Field>
+			<Field ID="{4BC6EBC8-6477-4284-84D3-5BC0F49A487E}" Group="Warner Music" Type="Choice" Name="WM_Security" DisplayName="Security">
+				<CHOICES>
+					<CHOICE>CONFIDENTIAL</CHOICE>
+					<CHOICE>HIGHLY CONFIDENTIAL</CHOICE>
+				</CHOICES>
+			</Field>
+			<Field ID="{76B796FE-E5F9-47FB-8C2E-E562FB6A56A8}" Group="Warner Music" Type="Choice" Name="WM_Version" DisplayName="Version">
+				<CHOICES>
+					<CHOICE>Explicit / Clean Version</CHOICE>
+					<CHOICE>Amended Version</CHOICE>
+				</CHOICES>
+			</Field>
+			<!-- Lookup -->
+			<!-- Taxonomy -->
+			<Field ID="{7C2B5681-3D01-4B8D-8316-3906C84953A9}" Type="Note" Name="bb7f92da69974144b5f0f67f8088eec4" DisplayName="WM_Configration_0" ShowInViewForms="FALSE" Hidden="TRUE" CanToggleHidden="TRUE" Required="FALSE"/>	
+			<Field ID="{BB7F92DA-6997-4144-B5F0-F67F8088EEC4}" Group="Warner Music" Type="TaxonomyFieldType" Name="WM_Configration" DisplayName="Configuration" ShowField="Term1033">
+				<Customization>
+					<ArrayOfProperty>
+						<Property>
+							<Name>SspId</Name>
+							<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p4:type="q1:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{sitecollectiontermstoreid}</Value>
+						</Property>
+						<Property>
+							<Name>TermSetId</Name>
+							<Value xmlns:q2="http://www.w3.org/2001/XMLSchema" p4:type="q2:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">9f174ece-ee14-4f58-bc92-18c89ac74984</Value>
+						</Property>
+						<Property>
+							<Name>TextField</Name>
+							<Value xmlns:q6="http://www.w3.org/2001/XMLSchema" p4:type="q6:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">7C2B5681-3D01-4B8D-8316-3906C84953A9</Value>
+						</Property>
+						<Property>
+							<Name>IsPathRendered</Name>
+							<Value xmlns:q7="http://www.w3.org/2001/XMLSchema" p4:type="q7:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+						</Property>
+						<Property>
+							<Name>IsKeyword</Name>
+							<Value xmlns:q8="http://www.w3.org/2001/XMLSchema" p4:type="q8:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+						</Property>
+					</ArrayOfProperty>
+				</Customization>
+			</Field>
+			<Field ID="{DE0F3877-8C2B-4AE5-9732-23991129AB2B}" Type="Note" Name="dd12569ccf6d430d99efc24193b8dcfe" DisplayName="WM_Label_0" ShowInViewForms="FALSE" Hidden="TRUE" CanToggleHidden="TRUE" Required="FALSE"/>	
+			<Field ID="{DD12569C-CF6D-430D-99EF-C24193B8DCFE}" Group="Warner Music" Type="TaxonomyFieldType" Name="WM_Label" DisplayName="Label" ShowField="Term1033">
+				<Customization>
+					<ArrayOfProperty>
+						<Property>
+							<Name>SspId</Name>
+							<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p4:type="q1:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{sitecollectiontermstoreid}</Value>
+						</Property>
+						<Property>
+							<Name>TermSetId</Name>
+							<Value xmlns:q2="http://www.w3.org/2001/XMLSchema" p4:type="q2:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">f9c9ac1c-9128-4c44-8c3c-8844ed2d9831</Value>
+						</Property>
+						<Property>
+							<Name>TextField</Name>
+							<Value xmlns:q6="http://www.w3.org/2001/XMLSchema" p4:type="q6:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">DE0F3877-8C2B-4AE5-9732-23991129AB2B</Value>
+						</Property>
+						<Property>
+							<Name>IsPathRendered</Name>
+							<Value xmlns:q7="http://www.w3.org/2001/XMLSchema" p4:type="q7:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+						</Property>
+						<Property>
+							<Name>IsKeyword</Name>
+							<Value xmlns:q8="http://www.w3.org/2001/XMLSchema" p4:type="q8:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+						</Property>
+					</ArrayOfProperty>
+				</Customization>
+			</Field>
+			<Field ID="{efc21cc2-7632-40b3-98d2-7417a8946f67}" Type="Note" Name="c2c184f8ace3409b819e01eb13d3c7ae" DisplayName="WM_Year_0" ShowInViewForms="FALSE" Hidden="TRUE" CanToggleHidden="TRUE" Required="FALSE"/>	
+			<Field ID="{c2c184f8-ace3-409b-819e-01eb13d3c7ae}" Group="Warner Music" Type="TaxonomyFieldType" Name="WM_Year" DisplayName="Year" ShowField="Term1033">
+				<Customization>
+					<ArrayOfProperty>
+						<Property>
+							<Name>SspId</Name>
+							<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p4:type="q1:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{sitecollectiontermstoreid}</Value>
+						</Property>
+						<Property>
+							<Name>TermSetId</Name>
+							<Value xmlns:q2="http://www.w3.org/2001/XMLSchema" p4:type="q2:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">0b98d864-3f71-4d10-9085-1f75436ecf77</Value>
+						</Property>
+						<Property>
+							<Name>TextField</Name>
+							<Value xmlns:q6="http://www.w3.org/2001/XMLSchema" p4:type="q6:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">efc21cc2-7632-40b3-98d2-7417a8946f67</Value>
+						</Property>
+						<Property>
+							<Name>IsPathRendered</Name>
+							<Value xmlns:q7="http://www.w3.org/2001/XMLSchema" p4:type="q7:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+						</Property>
+						<Property>
+							<Name>IsKeyword</Name>
+							<Value xmlns:q8="http://www.w3.org/2001/XMLSchema" p4:type="q8:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+						</Property>
+					</ArrayOfProperty>
+				</Customization>
+			</Field>
+			<Field ID="{ab208334-aaa7-4a56-9ad9-bc596470f5df}" Type="Note" Name="cd6bc103801a48589604f58b45bc76d4" DisplayName="WM_RepertoireUnit_0" ShowInViewForms="FALSE" Hidden="TRUE" CanToggleHidden="TRUE" Required="FALSE"/>	
+			<Field ID="{cd6bc103-801a-4858-9604-f58b45bc76d4}" Group="Warner Music" Type="TaxonomyFieldType" Name="WM_RepertoireUnit" DisplayName="Repertoire Unit" ShowField="Term1033">
+				<Customization>
+					<ArrayOfProperty>
+						<Property>
+							<Name>SspId</Name>
+							<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p4:type="q1:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{sitecollectiontermstoreid}</Value>
+						</Property>
+						<Property>
+							<Name>TermSetId</Name>
+							<Value xmlns:q2="http://www.w3.org/2001/XMLSchema" p4:type="q2:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">2557dadd-2147-4a9e-b2b6-f14622a59e5b</Value>
+						</Property>
+						<Property>
+							<Name>TextField</Name>
+							<Value xmlns:q6="http://www.w3.org/2001/XMLSchema" p4:type="q6:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">ab208334-aaa7-4a56-9ad9-bc596470f5df</Value>
+						</Property>
+						<Property>
+							<Name>IsPathRendered</Name>
+							<Value xmlns:q7="http://www.w3.org/2001/XMLSchema" p4:type="q7:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+						</Property>
+						<Property>
+							<Name>IsKeyword</Name>
+							<Value xmlns:q8="http://www.w3.org/2001/XMLSchema" p4:type="q8:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+						</Property>
+					</ArrayOfProperty>
+				</Customization>
+			</Field>
+			<Field ID="{a80950a1-c185-4904-8a70-db8395b03b4e}" Type="Note" Name="a935112e87ee4eb8b71025df836a50f3" DisplayName="WM_Genre_0" ShowInViewForms="FALSE" Hidden="TRUE" CanToggleHidden="TRUE" Required="FALSE"/>	
+			<Field ID="{a935112e-87ee-4eb8-b710-25df836a50f3}" Group="Warner Music" Type="TaxonomyFieldType" Name="WM_Genre" DisplayName="Genre" ShowField="Term1033">
+				<Customization>
+					<ArrayOfProperty>
+						<Property>
+							<Name>SspId</Name>
+							<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p4:type="q1:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{sitecollectiontermstoreid}</Value>
+						</Property>
+						<Property>
+							<Name>TermSetId</Name>
+							<Value xmlns:q2="http://www.w3.org/2001/XMLSchema" p4:type="q2:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">231805d8-d531-4a06-9fbb-1efed3bbf90e</Value>
+						</Property>
+						<Property>
+							<Name>TextField</Name>
+							<Value xmlns:q6="http://www.w3.org/2001/XMLSchema" p4:type="q6:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">a80950a1-c185-4904-8a70-db8395b03b4e</Value>
+						</Property>
+						<Property>
+							<Name>IsPathRendered</Name>
+							<Value xmlns:q7="http://www.w3.org/2001/XMLSchema" p4:type="q7:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+						</Property>
+						<Property>
+							<Name>IsKeyword</Name>
+							<Value xmlns:q8="http://www.w3.org/2001/XMLSchema" p4:type="q8:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+						</Property>
+					</ArrayOfProperty>
+				</Customization>
+			</Field>
+			<!-- Version 2
+			<Field ID="{b01bd114-8b91-42e9-be5e-003f15016a2a}" Type="Note" Name="eb13bc3e0f964ea1952cd4a7f59ef5eb" DisplayName="WM_StatusCC_0" ShowInViewForms="FALSE" Hidden="TRUE" CanToggleHidden="TRUE" Required="FALSE"/>	
+			<Field ID="{eb13bc3e-0f96-4ea1-952c-d4a7f59ef5eb}" Group="Warner Music" Type="TaxonomyFieldType" Name="WM_StatusCC" DisplayName="Status C&amp;C" ShowField="Term1033">
+				<Customization>
+					<ArrayOfProperty>
+						<Property>
+							<Name>SspId</Name>
+							<Value xmlns:q1="http://www.w3.org/2001/XMLSchema" p4:type="q1:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">{sitecollectiontermstoreid}</Value>
+						</Property>
+						<Property>
+							<Name>TermSetId</Name>
+							<Value xmlns:q2="http://www.w3.org/2001/XMLSchema" p4:type="q2:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">21698922-CBF7-4FC5-A70B-70A31C3E1D33</Value>
+						</Property>
+						<Property>
+							<Name>TextField</Name>
+							<Value xmlns:q6="http://www.w3.org/2001/XMLSchema" p4:type="q6:string" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">b01bd114-8b91-42e9-be5e-003f15016a2a</Value>
+						</Property>
+						<Property>
+							<Name>IsPathRendered</Name>
+							<Value xmlns:q7="http://www.w3.org/2001/XMLSchema" p4:type="q7:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+						</Property>
+						<Property>
+							<Name>IsKeyword</Name>
+							<Value xmlns:q8="http://www.w3.org/2001/XMLSchema" p4:type="q8:boolean" xmlns:p4="http://www.w3.org/2001/XMLSchema-instance">false</Value>
+						</Property>
+					</ArrayOfProperty>
+				</Customization>
+			</Field>
+			-->
+		</pnp:SiteFields>
+		<pnp:ContentTypes>
+			<pnp:ContentType ID="0x010067C49BB0E01A471B82828217BFBDE01C" Name="FocusList item" Description="" Group="Warner Music">
+				<pnp:FieldRefs>
+					<pnp:FieldRef ID="c2c184f8-ace3-409b-819e-01eb13d3c7ae" />
+					<pnp:FieldRef ID="DB957483-DD86-4DAE-8C35-D044E51FF7FF" />
+					<pnp:FieldRef ID="fa564e0f-0c70-4ab9-b863-0177e6ddd247" />
+					<pnp:FieldRef ID="7D860573-AFD4-461F-B6E1-44D1D86768CC" />
+					<pnp:FieldRef ID="BB7F92DA-6997-4144-B5F0-F67F8088EEC4" />
+					<pnp:FieldRef ID="9BE42148-74F0-4E1F-A143-68264E0ED42C" />
+					<pnp:FieldRef ID="D8594AA3-F310-4C14-BA7F-9471984883B8" />
+					<pnp:FieldRef ID="DD12569C-CF6D-430D-99EF-C24193B8DCFE" />
+					<pnp:FieldRef ID="a935112e-87ee-4eb8-b710-25df836a50f3" />
+					<pnp:FieldRef ID="776852CE-9454-4A4E-9660-2BB14EAFBE2F" />
+					<pnp:FieldRef ID="E24751A3-BFF5-41C8-A019-FC8D0248CB60" />
+					<pnp:FieldRef ID="BD473872-B8E9-424C-B49C-7E8F76798D1A" />
+					<pnp:FieldRef ID="0F8C7390-D477-4850-BC20-125B789EBCED" />
+					<pnp:FieldRef ID="AD734767-158B-4124-B339-01ED2CBAFFEA" />
+					<pnp:FieldRef ID="DC8205CA-FD41-4340-BFE4-B75AE8021B29" />
+					<pnp:FieldRef ID="348FA4C3-6F04-48A1-9226-F073F68D5DEC" />
+					<pnp:FieldRef ID="182F0F59-BF65-430C-AFEC-C0DE338C1178" />
+					<pnp:FieldRef ID="C2A6F2F0-F526-499F-8EA1-0B013BA45BE1" />
+					<pnp:FieldRef ID="0BF73A02-0BF9-4FD4-AD6B-4102991FEC2F" />
+					<pnp:FieldRef ID="8F71DC6B-AA34-4835-A9EF-C0BB424C48BD" />
+					<pnp:FieldRef ID="17F4817B-1344-4D7F-976B-FE98A8F12BFA" />
+					<pnp:FieldRef ID="9A1D3B62-1CD5-4EF9-A4E0-B027FA488D3E" />
+					<pnp:FieldRef ID="99BA0C74-4E65-4AC5-AB7B-76E9EB233699" />
+					<!-- Sortiert bis INT View -->
+					<pnp:FieldRef ID="6D648BDC-98E9-493A-BA7D-BA9F57AF6CD3" />
+					<pnp:FieldRef ID="89ADEFDC-FDFE-4F35-98D9-8ACF84305DF7" />
+					<pnp:FieldRef ID="BBFED672-EB2C-4D39-A24D-0B075ED7091B" />
+					<pnp:FieldRef ID="D3BD98EA-EFC3-4D9A-B50C-BCCD664FE7DE" />
+					<pnp:FieldRef ID="7A82AB0F-47C6-4C40-A2B5-FB258293DBF0" />
+					<pnp:FieldRef ID="771446D5-8E0A-4A51-B34E-522C7D53D7F3" />
+					<pnp:FieldRef ID="B654A00F-E151-42AE-B19A-16EB0CD96BEE" />
+					<pnp:FieldRef ID="0A4873CC-352F-4B1E-BBE8-2911624BCA55" />
+					<pnp:FieldRef ID="529B1510-9C85-426C-87C2-4278B8747D6E" />
+					<pnp:FieldRef ID="F4D172CE-5BED-46C4-B93A-A357F1829743" />
+					<pnp:FieldRef ID="4A02471C-6C86-4C37-9087-DA50B54D1F0F" />
+					<pnp:FieldRef ID="B8CE7B7B-E9EA-43A1-BE82-B8CEA8ACFD79" />
+					<pnp:FieldRef ID="9611E8C3-1BED-4CD2-9206-750FE26102BB" />
+					<pnp:FieldRef ID="7109E4EC-91E8-4971-BEB9-66DBB45546C2" />
+					<pnp:FieldRef ID="1B8B0484-7066-4890-84EF-86ED8E9A59AD" />
+					<pnp:FieldRef ID="39410810-DD93-42C6-87F7-02237900619C" />
+					<pnp:FieldRef ID="9ED7E1FF-9F73-48FC-BDB1-19CFBD9A77EA" />
+					<pnp:FieldRef ID="FEAE4AA7-4E85-4F1A-B86F-1B734D945C95" />
+					<pnp:FieldRef ID="cd6bc103-801a-4858-9604-f58b45bc76d4" />
+					<pnp:FieldRef ID="AC343F5B-87D6-4A88-BE40-F25D77D01DFF" />
+					<pnp:FieldRef ID="4BC6EBC8-6477-4284-84D3-5BC0F49A487E" />
+					<pnp:FieldRef ID="E49903C0-2F62-471B-A6FB-CAA333AFA75C" />
+
+					<pnp:FieldRef ID="76B796FE-E5F9-47FB-8C2E-E562FB6A56A8" />
+					<pnp:FieldRef ID="66FADB3B-3B2C-403D-9A75-657A1A99E6E6" />
+					<!-- Version 2
+					<pnp:FieldRef ID="89794122-C73B-4F74-944B-6127EE0D9796" />
+					<pnp:FieldRef ID="33278817-2B6F-4B7E-8017-7F38E26181EB" />
+					<pnp:FieldRef ID="DB2ED5D6-E577-4818-8ACA-2F9ABC5AFDD8" />
+					<pnp:FieldRef ID="33340025-E535-4B65-BF9B-073C4CD9707F" />
+					<pnp:FieldRef ID="D9A9A082-BD77-475B-A6F7-6717F463C5CE" />
+					<pnp:FieldRef ID="9A0DEB93-C4D0-46BB-B8FE-992032DEF802" />
+					<pnp:FieldRef ID="3F4DE2E3-6C19-4D65-AA09-B8614FBE6A74" />
+					<pnp:FieldRef ID="34F4346E-0B23-43CC-B6BA-70666AAB3ABD" />
+					<pnp:FieldRef ID="BBF18858-434C-4C8B-86B0-75FFBF651E2A" />
+					<pnp:FieldRef ID="DE93CEA3-2CD5-4034-A05E-BD698233DA6F" />
+					<pnp:FieldRef ID="F6927F26-4C24-4416-9FB0-63A705988270" />
+					<pnp:FieldRef ID="85A6F47B-6A05-4419-8664-A2A07EED015F" />
+					<pnp:FieldRef ID="2DEA6AE7-E96A-4103-9F65-48DC51E46277" />
+					<pnp:FieldRef ID="A166469C-3269-44EC-8E1A-EB8C51EAB43C" />
+					<pnp:FieldRef ID="8C67893F-186F-4BEF-BCAB-69D6FDF2B7F3" />
+					<pnp:FieldRef ID="7857EB60-B07F-4CB2-8F58-04132EEC9389" />
+					<pnp:FieldRef ID="125E8B1C-4FDC-42B0-A7CB-337CED6878E9" />
+					<pnp:FieldRef ID="eb13bc3e-0f96-4ea1-952c-d4a7f59ef5eb" />				
+					-->
+				</pnp:FieldRefs>
+			</pnp:ContentType>
+		</pnp:ContentTypes>
+		<pnp:Lists>
+			<pnp:ListInstance Title="Focus List" OnQuickLaunch="true" TemplateType="100" Url="Lists/FocusList" RemoveExistingContentTypes="true" ContentTypesEnabled="true" EnableFolderCreation="false" >
+				<pnp:ContentTypeBindings>
+					<pnp:ContentTypeBinding ContentTypeID="0x010067C49BB0E01A471B82828217BFBDE01C" Default="true" />
+				</pnp:ContentTypeBindings>
+				<pnp:FieldRefs>
+					<pnp:FieldRef ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Required="false" />
+				</pnp:FieldRefs>
+				<pnp:Views RemoveExistingViews="false">
+					<View Name="Testview" DefaultView="FALSE" MobileView="FALSE" Type="HTML" DisplayName="Testview" Url="{site}/Lists/FocusList/Testview.aspx" Level="1" BaseViewID="1">
+						<Query>
+							<OrderBy>
+								<FieldRef Name="WM_Year" />
+								<FieldRef Name="WM_KW" />
+							</OrderBy>
+						</Query>
+						<ViewFields>
+							<FieldRef Name="DocIcon" />
+							<FieldRef Name="LinkTitle" />
+							<FieldRef Name="Author" />
+						</ViewFields>
+						<RowLimit Paged="TRUE">30</RowLimit>
+						<Aggregations Value="Off" />
+						<JSLink>clienttemplates.js</JSLink>
+						<XslLink Default="TRUE">main.xsl</XslLink>
+						<Toolbar Type="Standard" />
+					</View>
+					<View Name="OPFocusReportStreamingTracks" DefaultView="FALSE" MobileView="FALSE" Type="HTML" DisplayName="OP-FocusReportStreaming-Tracks" Url="{site}/Lists/FocusList/Focus.aspx" Level="1" BaseViewID="1">
+						<Query>
+							<OrderBy>
+								<FieldRef Name="WM_Year" />
+								<FieldRef Name="WM_KW" />
+							</OrderBy>
+						</Query>
+						<ViewFields>
+							<FieldRef Name="WM_Year" />
+							<FieldRef Name="WM_KW" />
+							<FieldRef Name="WM_Artist" />
+							<FieldRef Name="LinkTitle" />
+							<FieldRef Name="WM_ReleaseDate" />
+							<FieldRef Name="WM_ReleaseDateComment" />
+							<FieldRef Name="WM_RepertoireUnit" />
+							<FieldRef Name="WM_StreamingUnit" />
+							<FieldRef Name="WM_Label" />
+							<FieldRef Name="WM_Genre" />
+							<FieldRef Name="WM_Security" />
+							<FieldRef Name="WM_GPSStatus" />
+							<FieldRef Name="WM_Comments" />
+							<FieldRef Name="WM_Readyness" />
+							<FieldRef Name="WM_Matrix" />
+							<FieldRef Name="WM_ISRC" />
+							<FieldRef Name="WM_GPID" />
+							<FieldRef Name="WM_DIDSpotify" />
+							<FieldRef Name="WM_DIDApple" />
+							<FieldRef Name="WM_DIDAmazon" />
+							<FieldRef Name="WM_DIDDeezer" />
+							<FieldRef Name="WM_LinkStorybox" />
+							<FieldRef Name="WM_LinkCoverart" />
+							<FieldRef Name="WM_LinkAudio" />
+							<FieldRef Name="WM_ExSpotifyID" />
+							<FieldRef Name="WM_ExAppleID" />
+							<FieldRef Name="WM_ExAmazonID" />
+							<FieldRef Name="WM_ExDeezerID" />
+						</ViewFields>
+						<RowLimit Paged="TRUE">30</RowLimit>
+						<Aggregations Value="Off" />
+						<JSLink>clienttemplates.js</JSLink>
+						<XslLink Default="TRUE">main.xsl</XslLink>
+						<Toolbar Type="Standard" />
+					</View>
+					<View Name="INTKatListe20INTNewReleases" DefaultView="FALSE" MobileView="FALSE" Type="HTML" DisplayName="INT-KatListe20-INT New Releases" Url="{site}/Lists/FocusList/INT.aspx" Level="1" BaseViewID="1">
+						<Query>
+							<OrderBy>
+								<FieldRef Name="WM_Year" />
+								<FieldRef Name="WM_KW" />
+							</OrderBy>
+							<Where>
+								<Eq>
+									<FieldRef Name="WM_RepertoireUnit" />
+									<Value Type="Text">Own International</Value>
+								</Eq>
+							</Where>
+						</Query>
+						<ViewFields>
+							<FieldRef Name="WM_Year" />
+							<FieldRef Name="WM_KW" />
+							<FieldRef Name="LinkTitle" />
+							<FieldRef Name="WM_Artist" />
+							<FieldRef Name="WM_Configration" />
+							<FieldRef Name="WM_ReleaseDate" />
+							<FieldRef Name="WM_ReleaseDateComment" />
+							<FieldRef Name="WM_Label" />
+							<FieldRef Name="WM_Genre" />
+							<FieldRef Name="WM_GPID" />
+							<FieldRef Name="WM_StatusConfi" />
+							<FieldRef Name="WM_KatStreaming" />
+							<FieldRef Name="WM_KatMarketing" />
+							<FieldRef Name="WM_KatTV" />
+							<FieldRef Name="WM_KatPrint" />
+							<FieldRef Name="WM_KatRadio" />
+							<FieldRef Name="WM_KatPaid" />
+							<FieldRef Name="WM_KatOwned" />
+							<FieldRef Name="WM_Kat2Glory" />
+							<FieldRef Name="WM_BrandManager" />
+							<FieldRef Name="WM_LeadStories" />
+							<FieldRef Name="WM_NotesINT" />
+							<FieldRef Name="WM_INTMeetings" />
+							<FieldRef Name="Author" />
+						</ViewFields>
+						<RowLimit Paged="TRUE">30</RowLimit>
+						<Aggregations Value="Off" />
+						<JSLink>clienttemplates.js</JSLink>
+						<XslLink Default="TRUE">main.xsl</XslLink>
+						<Toolbar Type="Standard" />
+					</View>
+					<View Name="DOMOverviewProductVIEW" DefaultView="FALSE" MobileView="FALSE" Type="HTML" DisplayName="DOM-Overview-Product VIEW" Url="{site}/Lists/FocusList/DOM.aspx" Level="1" BaseViewID="1">
+						<Query>
+							<OrderBy>
+								<FieldRef Name="WM_Year" />
+								<FieldRef Name="WM_KW" />
+							</OrderBy>
+						</Query>
+						<ViewFields>
+							<FieldRef Name="WM_Year" />
+							<FieldRef Name="WM_KW" />
+							<FieldRef Name="WM_Artist" />
+							<FieldRef Name="LinkTitle" />
+							<FieldRef Name="WM_Configration" />
+							<FieldRef Name="WM_ReleaseDate" />
+							<FieldRef Name="WM_ReleaseDateComment" />
+							<FieldRef Name="WM_Genre" />
+							<FieldRef Name="WM_RepertoireUnit" />
+							<FieldRef Name="WM_Security" />
+							<FieldRef Name="WM_GPID" />
+							<FieldRef Name="WM_StatusConfi" />
+						</ViewFields>
+						<RowLimit Paged="TRUE">30</RowLimit>
+						<Aggregations Value="Off" />
+						<JSLink>clienttemplates.js</JSLink>
+						<XslLink Default="TRUE">main.xsl</XslLink>
+						<Toolbar Type="Standard" />
+					</View>
+					<View Name="CnCMaster" DefaultView="FALSE" MobileView="FALSE" Type="HTML" DisplayName="CnC-Master" Url="{site}/Lists/FocusList/CnC.aspx" Level="1" BaseViewID="1">
+						<Query>
+							<OrderBy>
+								<FieldRef Name="WM_Year" />
+								<FieldRef Name="WM_KW" />
+							</OrderBy>
+						</Query>
+						<ViewFields>
+							<FieldRef Name="WM_Artist" />
+							<FieldRef Name="LinkTitle" />
+							<FieldRef Name="WM_Configration" />
+							<FieldRef Name="WM_ReleaseDate" />
+							<FieldRef Name="WM_ReleaseDateComment" />
+							<FieldRef Name="WM_Genre" />
+							<FieldRef Name="WM_Security" />
+							<FieldRef Name="WM_GPID" />
+							<FieldRef Name="WM_ExAppleID" />
+							<FieldRef Name="WM_ExAmazonID" />
+							<FieldRef Name="WM_ExDeezerID" />
+							<FieldRef Name="WM_KatStreaming" />
+						</ViewFields>
+						<RowLimit Paged="TRUE">30</RowLimit>
+						<Aggregations Value="Off" />
+						<JSLink>clienttemplates.js</JSLink>
+						<XslLink Default="TRUE">main.xsl</XslLink>
+						<Toolbar Type="Standard" />
+					</View>
+				</pnp:Views>
+			</pnp:ListInstance>
+		</pnp:Lists>
+    </pnp:ProvisioningTemplate>
+  </pnp:Templates>
+</pnp:Provisioning>

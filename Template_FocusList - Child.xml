@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<pnp:Provisioning xmlns:pnp="http://schemas.dev.office.com/PnP/2018/05/ProvisioningSchema">
+  <pnp:Preferences Generator="OfficeDevPnP.Core, Version=2.27.1806.0, Culture=neutral, PublicKeyToken=null" />
+  <pnp:Templates ID="CONTAINER-Warner_FocusList_Child">
+    <pnp:ProvisioningTemplate ID="Warner_FocusList_Child" Version="1.0">
+		<pnp:SiteFields>
+			<!--Felder-->
+			<!-- Text -->
+			<!-- Link -->
+			<!-- Date -->
+			<!-- Note -->
+			<!-- Person -->
+			<!-- Choice -->
+			<!-- Lookup -->
+			<Field ID="{6C798145-A205-4FC4-8175-837B0F7744CC}" Group="Warner Music" Type="Lookup" Name="WM_MainVersion" DisplayName="Main version" List="Lists/FocusList" ShowField="Title"/>			
+			<!-- Taxonomy -->
+		</pnp:SiteFields>
+		<pnp:ContentTypes>
+			<pnp:ContentType ID="0x01005489D1E62B0B43AAAFC23FCA4D25A8B0" Name="FocusList item Sub" Description="" Group="Warner Music">
+				<pnp:FieldRefs>
+					<pnp:FieldRef ID="fa564e0f-0c70-4ab9-b863-0177e6ddd247" />
+					<pnp:FieldRef ID="cd6bc103-801a-4858-9604-f58b45bc76d4" />
+					<pnp:FieldRef ID="6C798145-A205-4FC4-8175-837B0F7744CC" />
+					<pnp:FieldRef ID="E49903C0-2F62-471B-A6FB-CAA333AFA75C" />
+					<pnp:FieldRef ID="9ED7E1FF-9F73-48FC-BDB1-19CFBD9A77EA" />
+					<pnp:FieldRef ID="776852CE-9454-4A4E-9660-2BB14EAFBE2F" />
+					<pnp:FieldRef ID="89ADEFDC-FDFE-4F35-98D9-8ACF84305DF7" />
+					<pnp:FieldRef ID="BBFED672-EB2C-4D39-A24D-0B075ED7091B" />
+					<pnp:FieldRef ID="D3BD98EA-EFC3-4D9A-B50C-BCCD664FE7DE" />
+					<pnp:FieldRef ID="7A82AB0F-47C6-4C40-A2B5-FB258293DBF0" />
+					<pnp:FieldRef ID="771446D5-8E0A-4A51-B34E-522C7D53D7F3" />
+					<pnp:FieldRef ID="B654A00F-E151-42AE-B19A-16EB0CD96BEE" />
+					<pnp:FieldRef ID="0A4873CC-352F-4B1E-BBE8-2911624BCA55" />
+					<pnp:FieldRef ID="529B1510-9C85-426C-87C2-4278B8747D6E" />
+					<pnp:FieldRef ID="9611E8C3-1BED-4CD2-9206-750FE26102BB" />
+					<pnp:FieldRef ID="7109E4EC-91E8-4971-BEB9-66DBB45546C2" />
+					<pnp:FieldRef ID="1B8B0484-7066-4890-84EF-86ED8E9A59AD" />
+				</pnp:FieldRefs>
+			</pnp:ContentType>
+		</pnp:ContentTypes>
+		<pnp:Lists>
+			<pnp:ListInstance Title="Focus List" OnQuickLaunch="true" TemplateType="100" Url="Lists/FocusList" RemoveExistingContentTypes="true" ContentTypesEnabled="true" EnableFolderCreation="false" >
+				<pnp:ContentTypeBindings>
+					<pnp:ContentTypeBinding ContentTypeID="0x010067C49BB0E01A471B82828217BFBDE01C" Default="true" />
+					<pnp:ContentTypeBinding ContentTypeID="0x01005489D1E62B0B43AAAFC23FCA4D25A8B0" Default="false" />
+				</pnp:ContentTypeBindings>
+				<pnp:FieldRefs>
+					<pnp:FieldRef ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Required="false" />
+				</pnp:FieldRefs>
+			</pnp:ListInstance>
+		</pnp:Lists>
+    </pnp:ProvisioningTemplate>
+  </pnp:Templates>
+</pnp:Provisioning>
