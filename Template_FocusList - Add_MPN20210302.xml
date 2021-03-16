@@ -11,16 +11,7 @@
 			<!-- Note -->
 			<!-- Person -->
 			<!-- Choice -->
-			<Field
-			Type="Boolean"
-			Group="Warner Music"
-			DisplayName="MPN Sampling"
-			Required="FALSE"
-			ID="{8b9f8e3f-6ad0-4557-8a8a-7fc7118ba9eb}"
-			Name="WM_MPN_Sampling">
-			<!--Name="MPN_x0020_Sampling"> -->
-			<Default>FALSE</Default>
-			</Field>
+			<Field Type="Boolean" Group="Warner Music" DisplayName="MPN Sampling" Required="FALSE" ID="{8b9f8e3f-6ad0-4557-8a8a-7fc7118ba9eb}" Name="WM_MPN_Sampling" /> 
 			<!-- Lookup -->
 			<!-- Number -->
 			<!-- Taxonomy -->
@@ -31,63 +22,49 @@
 			<pnp:ContentType ID="0x010067C49BB0E01A471B82828217BFBDE01C" Name="FocusList item" Description="" Group="Warner Music">
 				<pnp:FieldRefs>
 					<pnp:FieldRef ID="8b9f8e3f-6ad0-4557-8a8a-7fc7118ba9eb" />
-
 				</pnp:FieldRefs>
 			</pnp:ContentType>
 			<pnp:ContentType ID="0x01005489D1E62B0B43AAAFC23FCA4D25A8B0" Name="FocusList item Sub" Description="" Group="Warner Music">
 				<pnp:FieldRefs>
 					<pnp:FieldRef ID="8b9f8e3f-6ad0-4557-8a8a-7fc7118ba9eb" />
-
 				</pnp:FieldRefs>
 			</pnp:ContentType>
 		</pnp:ContentTypes>
 		<pnp:Lists>
 			<pnp:ListInstance Title="Focus List" OnQuickLaunch="true" TemplateType="100" Url="Lists/FocusList" RemoveExistingContentTypes="true" ContentTypesEnabled="true" EnableFolderCreation="false" >
 				<pnp:Views>
-					<View Name="{FFF93D01-2E56-40B7-8469-CB7D98FA9180}" Type="HTML" DisplayName="MPN Bemusterungsliste" Url="{site}/Lists/FocusList/MPN_Sampling.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+					<View Name="{E353FD89-63F5-469E-B5EF-5442EFE1D39B}" Type="HTML" DisplayName="MPN Bemusterungsliste" Url="{site}/Lists/FocusList/MPN_Sampling.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
 						<Query>
 						  <OrderBy>
 							<FieldRef Name="WM_RepertoireUnit" />
 							<FieldRef Name="WM_Artist" />
 						  </OrderBy>
 						  <Where>
-							<Or>
+							<And>
 							  <And>
-								<Eq>
+								<Or>
+								  <Eq>
 									<FieldRef Name="WM_MPN_Sampling" />
 									<Value Type="Boolean">1</Value>
-								</Eq>
+								  </Eq>
+								  <IsNotNull>
+									<FieldRef Name="WM_MPN_Status" />
+								  </IsNotNull>
+								</Or>
 								<Geq>
-									<FieldRef Name="WM_KWEndDate" />
-									<Value Type="DateTime">
+								  <FieldRef Name="WM_KWEndDate" />
+								  <Value Type="DateTime">
 									<Today />
-									</Value>
+								  </Value>
 								</Geq>
-								<Lt>
-									<FieldRef Name="WM_KWEndDate" />
-									<Value Type="DateTime">
-									<Today OffsetDays="14" />
-									</Value>
-								</Lt>
-							</And>
-							<And>
-							  <IsNotNull>
-								<FieldRef Name="WM_MPN_Status" />
-							  </IsNotNull>
-							  <Geq>
+							  </And>
+							  <Leq>
 								<FieldRef Name="WM_KWEndDate" />
 								<Value Type="DateTime">
-								<Today />
+								  <Today OffsetDays="14" />
 								</Value>
-							</Geq>
-							<Lt>
-								<FieldRef Name="WM_KWEndDate" />
-								<Value Type="DateTime">
-								<Today OffsetDays="14" />
-								</Value>
-							</Lt>
+							  </Leq>
 							</And>
-							</Or>
 						  </Where>
 						</Query>
 						<ViewFields>
