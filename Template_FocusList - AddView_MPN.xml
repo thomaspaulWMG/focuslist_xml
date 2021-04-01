@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<pnp:Provisioning xmlns:pnp="http://schemas.dev.office.com/PnP/2018/05/ProvisioningSchema">
+  <pnp:Preferences Generator="OfficeDevPnP.Core, Version=2.27.1806.0, Culture=neutral, PublicKeyToken=null" />
+  <pnp:Templates ID="CONTAINER-Warner_FocusList_Child">
+    <pnp:ProvisioningTemplate ID="Warner_FocusList_MPN" Version="1.0">
+		<pnp:Lists>
+			<pnp:ListInstance Title="Focus List" OnQuickLaunch="true" TemplateType="100" Url="Lists/FocusList" RemoveExistingContentTypes="true" ContentTypesEnabled="true" EnableFolderCreation="false" >
+				<pnp:Views>
+                    <View Name="{E353FD89-63F5-469E-B5EF-5442EFE1D39B}" Type="HTML" DisplayName="MPN Bemusterungsliste" Url="{site}/Lists/FocusList/MPN_Sampling.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+                        <Query>
+                          <OrderBy>
+                            <FieldRef Name="WM_RepertoireUnit" />
+                            <FieldRef Name="WM_Artist" />
+                          </OrderBy>
+                          <Where>
+                            <And>
+                              <And>
+                                <Or>
+                                  <Eq>
+                                    <FieldRef Name="WM_MPN_Sampling" />
+                                    <Value Type="Boolean">1</Value>
+                                  </Eq>
+                                  <IsNotNull>
+                                    <FieldRef Name="WM_MPN_Status" />
+                                  </IsNotNull>
+                                </Or>
+                                <Geq>
+                                  <FieldRef Name="WM_KWEndDate" />
+                                  <Value Type="DateTime">
+                                    <Today />
+                                  </Value>
+                                </Geq>
+                              </And>
+                              <Leq>
+                                <FieldRef Name="WM_KWEndDate" />
+                                <Value Type="DateTime">
+                                  <Today OffsetDays="14" />
+                                </Value>
+                              </Leq>
+                            </And>
+                          </Where>
+                        </Query>
+                        <ViewFields>
+                          <FieldRef Name="WM_Year" />
+                          <FieldRef Name="WM_KW" />
+                          <FieldRef Name="WM_RepertoireUnit" />
+                          <FieldRef Name="WM_ReleaseDate" />
+                          <FieldRef Name="WM_AirDt" />
+                          <FieldRef Name="WM_Artist" />
+                          <FieldRef Name="Title" />
+                          <FieldRef Name="WM_Configration" />
+                          <FieldRef Name="WM_Security" />
+                          <FieldRef Name="WM_KatRadio" />
+                          <FieldRef Name="WM_GPID" />
+                          <FieldRef Name="WM_ISRC" />
+                          <FieldRef Name="WM_LinkStorybox" />
+                          <FieldRef Name="WM_MPN_Status" />
+                          <FieldRef Name="WM_MPNTimed_Dt" />
+                          <FieldRef Name="WM_MPN_Comments" />
+                          <FieldRef Name="WM_MPN_Sampling" />
+                        </ViewFields>
+                        <RowLimit Paged="TRUE">60</RowLimit>
+                        <Aggregations Value="Off" />
+                        <JSLink>clienttemplates.js</JSLink>
+                        <ViewData />
+                      </View>
+				  </pnp:Views>
+				<pnp:FieldRefs>
+					<pnp:FieldRef ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Required="false" />
+				</pnp:FieldRefs>
+			</pnp:ListInstance>
+		</pnp:Lists>
+    </pnp:ProvisioningTemplate>
+  </pnp:Templates>
+</pnp:Provisioning>
