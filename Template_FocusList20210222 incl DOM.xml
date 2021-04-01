@@ -1467,6 +1467,7 @@
 						<Aggregations Value="Off" />
 						<JSLink>clienttemplates.js</JSLink>
 					  </View>
+					  <!-- alte View
 					  <View Name="{E2CBCC24-EBED-4417-B96F-175B36D8BB37}" Type="HTML" DisplayName="MPN-Sample Delivery" Url="{site}/Lists/FocusList/MPN.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
 						<Query>
 						  <OrderBy>
@@ -1513,12 +1514,12 @@
 						  <FieldRef Name="WM_KatRadio" />
 						  <FieldRef Name="WM_ISRC" />
 						  <FieldRef Name="WM_GPID" />
-<!--						  <FieldRef Name="SortierOP" /> -->
 						</ViewFields>
 						<RowLimit Paged="TRUE">60</RowLimit>
 						<Aggregations Value="Off" />
 						<JSLink>clienttemplates.js</JSLink>
 					  </View>
+						-->
 					  <View Name="{FFF93D01-2E56-40B7-8469-CB7D98FA9180}" Type="HTML" DisplayName="MPN Bemusterungsliste" Url="{site}/Lists/FocusList/MPN_Sampling.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
 						<Query>
 						  <OrderBy>

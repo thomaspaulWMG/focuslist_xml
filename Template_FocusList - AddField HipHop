@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<pnp:Provisioning xmlns:pnp="http://schemas.dev.office.com/PnP/2018/05/ProvisioningSchema">
+  <pnp:Preferences Generator="OfficeDevPnP.Core, Version=2.27.1806.0, Culture=neutral, PublicKeyToken=null" />
+  <pnp:Templates ID="CONTAINER-Warner_FocusList_Child">
+    <pnp:ProvisioningTemplate ID="Warner_FocusList_HipHop" Version="1.0">
+		<pnp:SiteFields>
+			<!--Felder-->
+			<!-- Text -->
+            <Field ID="{95a18d97-6c33-4323-b96c-912b454aee8e}" Group="Warner Music" Type="Text" Name="WM_MonthListeners" DisplayName="Monthly Listeners" MaxLength="50"/>
+            <Field ID="{eeee09f9-6b67-48d6-8f7a-967009476084}" Group="Warner Music" Type="Text" Name="WM_LeadTerritory" DisplayName="Lead Territory" MaxLength="20"/>
+			<!-- Link -->
+			<!-- Date -->
+			<!-- Note -->
+			<!-- Person -->
+			<!-- Choice -->
+			<!-- Lookup -->
+			<!-- Number -->
+			<!-- Taxonomy -->
+			<!-- Currency -->
+			<!-- Boolean -->
+		</pnp:SiteFields>
+		<pnp:ContentTypes>
+			<pnp:ContentType ID="0x010067C49BB0E01A471B82828217BFBDE01C" Name="FocusList item" Description="" Group="Warner Music">
+				<pnp:FieldRefs>
+					<pnp:FieldRef ID="95a18d97-6c33-4323-b96c-912b454aee8e" />
+                    <pnp:FieldRef ID="eeee09f9-6b67-48d6-8f7a-967009476084" />
+				</pnp:FieldRefs>
+			</pnp:ContentType>
+			<pnp:ContentType ID="0x01005489D1E62B0B43AAAFC23FCA4D25A8B0" Name="FocusList item Sub" Description="" Group="Warner Music">
+				<pnp:FieldRefs>
+					<pnp:FieldRef ID="95a18d97-6c33-4323-b96c-912b454aee8e" />
+                    <pnp:FieldRef ID="eeee09f9-6b67-48d6-8f7a-967009476084" />
+				</pnp:FieldRefs>
+			</pnp:ContentType>
+		</pnp:ContentTypes>
+    </pnp:ProvisioningTemplate>
+  </pnp:Templates>
+</pnp:Provisioning>
