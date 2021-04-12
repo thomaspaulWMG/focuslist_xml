@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<pnp:Provisioning xmlns:pnp="http://schemas.dev.office.com/PnP/2018/05/ProvisioningSchema">
+  <pnp:Preferences Generator="OfficeDevPnP.Core, Version=2.27.1806.0, Culture=neutral, PublicKeyToken=null" />
+  <pnp:Templates ID="CONTAINER-Warner_FocusList_Child">
+    <pnp:ProvisioningTemplate ID="Warner_FocusList_DSP" Version="3.0">
+		<pnp:SiteFields>
+			<!--Felder-->
+			<!-- Text -->
+			<!-- Link -->
+			<!-- Date -->
+			<!-- Note -->
+			<!-- Person -->
+			<!-- Choice -->
+			<!-- Lookup -->
+			<!-- Number -->
+            <Field Type="Number" Group="Warner Music" ID="{236de134-0c11-4638-a966-da763e6e0936}" Name="WM_Pitch_Amazon" DisplayName="PitchVersion_Amazon" Required="FALSE" Decimals="0"/>
+            <Field Type="Number" Group="Warner Music" ID="{d461ff84-b1c2-4d3d-b984-2c233d86296c}" Name="WM_Pitch_Apple" DisplayName="PitchVersion_Apple" Required="FALSE" Decimals="0"/>
+            <Field Type="Number" Group="Warner Music" ID="{4a7d229e-32d6-4fad-94e6-39d1cc268d7f}" Name="WM_Pitch_Deezer" DisplayName="PitchVersion_Deezer" Required="FALSE" Decimals="0"/>
+            <Field Type="Number" Group="Warner Music" ID="{ef69f034-f442-4408-aeec-93e2edea8261}" Name="WM_Pitch_Napster" DisplayName="PitchVersion_Napster" Required="FALSE" Decimals="0"/>
+            <Field Type="Number" Group="Warner Music" ID="{53608eef-2800-49e1-aa89-4fd1a50345a6}" Name="WM_Pitch_Spotify" DisplayName="PitchVersion_Spotify" Required="FALSE" Decimals="0"/>
+            <Field Type="Number" Group="Warner Music" ID="{789b59e8-2121-4371-b162-8a3736fa39fb}" Name="WM_Pitch_YouTube" DisplayName="PitchVersion_YouTube" Required="FALSE" Decimals="0"/>
+			<!-- Taxonomy -->
+			<!-- Currency -->
+			<!-- Boolean -->
+            <Field Type="Boolean" Group="Warner Music" ID="{2c164836-d34a-4d60-8cbb-93b1ddedb1b0}" Name="WM_DSP_Amazon" DisplayName="Amazon" Required="FALSE">
+                <Default>TRUE</Default></Field>
+            <Field Type="Boolean" Group="Warner Music" ID="{52ad8eb3-8eb8-44ff-9ba7-efe2d3b7a82d}" Name="WM_DSP_Apple" DisplayName="Apple" Required="FALSE">
+                <Default>TRUE</Default></Field>
+            <Field Type="Boolean" Group="Warner Music" ID="{477e63ee-b16f-4af3-9ec8-03d91aa7dab2}" Name="WM_DSP_Deezer" DisplayName="Deezer" Required="FALSE">
+                <Default>TRUE</Default></Field>
+            <Field Type="Boolean" Group="Warner Music" ID="{b4dd52f9-e065-46a4-bcfb-612b43d9e6ea}" Name="WM_DSP_Napster" DisplayName="Napster" Required="FALSE">
+                <Default>TRUE</Default></Field>
+            <Field Type="Boolean" Group="Warner Music" ID="{471d7276-2e17-4471-9818-09c4234ad72a}" Name="WM_DSP_Spotify" DisplayName="Spotify" Required="FALSE">
+                <Default>TRUE</Default></Field>
+            <Field Type="Boolean" Group="Warner Music" ID="{ff618aec-e47e-4d82-a2c9-8af65922c509}" Name="WM_DSP_YouTube" DisplayName="YouTube" Required="FALSE">
+                <Default>TRUE</Default></Field>
+		</pnp:SiteFields>
+		<pnp:ContentTypes>
+			<pnp:ContentType ID="0x010067C49BB0E01A471B82828217BFBDE01C" Name="FocusList item" Description="" Group="Warner Music">
+				<pnp:FieldRefs>
+					<pnp:FieldRef ID="2c164836-d34a-4d60-8cbb-93b1ddedb1b0" />
+                    <pnp:FieldRef ID="52ad8eb3-8eb8-44ff-9ba7-efe2d3b7a82d" />
+                    <pnp:FieldRef ID="477e63ee-b16f-4af3-9ec8-03d91aa7dab2" />
+                    <pnp:FieldRef ID="b4dd52f9-e065-46a4-bcfb-612b43d9e6ea" />
+                    <pnp:FieldRef ID="471d7276-2e17-4471-9818-09c4234ad72a" />
+                    <pnp:FieldRef ID="ff618aec-e47e-4d82-a2c9-8af65922c509" />
+                    <pnp:FieldRef ID="236de134-0c11-4638-a966-da763e6e0936" />
+                    <pnp:FieldRef ID="d461ff84-b1c2-4d3d-b984-2c233d86296c" />
+                    <pnp:FieldRef ID="4a7d229e-32d6-4fad-94e6-39d1cc268d7f" />
+                    <pnp:FieldRef ID="ef69f034-f442-4408-aeec-93e2edea8261" />
+                    <pnp:FieldRef ID="53608eef-2800-49e1-aa89-4fd1a50345a6" />
+                    <pnp:FieldRef ID="789b59e8-2121-4371-b162-8a3736fa39fb" />
+				</pnp:FieldRefs>
+			</pnp:ContentType>
+			<pnp:ContentType ID="0x01005489D1E62B0B43AAAFC23FCA4D25A8B0" Name="FocusList item Sub" Description="" Group="Warner Music">
+				<pnp:FieldRefs>
+					<pnp:FieldRef ID="2c164836-d34a-4d60-8cbb-93b1ddedb1b0" />
+                    <pnp:FieldRef ID="52ad8eb3-8eb8-44ff-9ba7-efe2d3b7a82d" />
+                    <pnp:FieldRef ID="477e63ee-b16f-4af3-9ec8-03d91aa7dab2" />
+                    <pnp:FieldRef ID="b4dd52f9-e065-46a4-bcfb-612b43d9e6ea" />
+                    <pnp:FieldRef ID="471d7276-2e17-4471-9818-09c4234ad72a" />
+                    <pnp:FieldRef ID="ff618aec-e47e-4d82-a2c9-8af65922c509" />
+                    <pnp:FieldRef ID="236de134-0c11-4638-a966-da763e6e0936" />
+                    <pnp:FieldRef ID="d461ff84-b1c2-4d3d-b984-2c233d86296c" />
+                    <pnp:FieldRef ID="4a7d229e-32d6-4fad-94e6-39d1cc268d7f" />
+                    <pnp:FieldRef ID="ef69f034-f442-4408-aeec-93e2edea8261" />
+                    <pnp:FieldRef ID="53608eef-2800-49e1-aa89-4fd1a50345a6" />
+                    <pnp:FieldRef ID="789b59e8-2121-4371-b162-8a3736fa39fb" />
+				</pnp:FieldRefs>
+			</pnp:ContentType>
+		</pnp:ContentTypes>
+    </pnp:ProvisioningTemplate>
+  </pnp:Templates>
+</pnp:Provisioning>
