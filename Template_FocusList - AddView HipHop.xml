@@ -4,45 +4,50 @@
   <pnp:Templates ID="CONTAINER-Warner_FocusList_Child">
     <pnp:ProvisioningTemplate ID="Warner_FocusList_HipHipView" Version="1.0">
 		<pnp:Lists>
-			<pnp:ListInstance Title="Focus List" OnQuickLaunch="true" TemplateType="100" Url="Lists/FocusList" RemoveExistingContentTypes="true" ContentTypesEnabled="true" EnableFolderCreation="false" >
+			<pnp:ListInstance Title="Focus List" OnQuickLaunch="true" TemplateType="100" Url="Lists/FocusList" EnableVersioning="true" MinorVersionLimit="0" MaxVersionLimit="30" RemoveExistingContentTypes="true" ContentTypesEnabled="true" EnableFolderCreation="false" >
 				<pnp:Views>
-					<View Name="{ec2190f8-ec11-4b6a-a3ea-8a6d17a6537b}" Type="HTML" DisplayName="Hip Hop" Url="{site}/Lists/FocusList/HipHop.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
-                        <Query>
-                            <Where>
-                                <And>
-                                    <Geq>
-                                       <FieldRef Name='WM_ReleaseDate' />
-                                       <Value Type="DateTime">
-                                        <Today />
-                                      </Value>
-                                    </Geq>
-                                    <Eq>
-                                        <FieldRef Name='WM_Genre' />
-                                        <Value Type='TaxonomyFieldType'>HipHop / Rap</Value>
-                                     </Eq>
-                                 </And>
-                            </Where>
-                            <OrderBy>
-                                <FieldRef Name='WM_ReleaseDate' Ascending='True' />
-                                <FieldRef Name='WM_Artist' Ascending='True' />
-                             </OrderBy>
-                         </Query>
-                         <ViewFields>
-                            <FieldRef Name='WM_ReleaseDate' />
-                            <FieldRef Name='WM_Artist' />
-                            <FieldRef Name='Title' />
-                            <FieldRef Name='WM_Configration' />
-                            <FieldRef Name='WM_MonthListeners' />
-                            <FieldRef Name='WM_Genre' />
-                            <FieldRef Name='WM_Label' />
-                            <FieldRef Name='WM_LeadTerritory' />
-                         </ViewFields>
-                         <QueryOptions />
-						<RowLimit Paged="TRUE">60</RowLimit>
-						<Aggregations Value="Off" />
-						<JSLink>clienttemplates.js</JSLink>
-						<ViewData />
-					  </View>
+          <View Name="{3A573172-84FF-4EA4-89A0-EC82ACE9E61B}" Type="HTML" DisplayName="Hip Hop" Url="{site}/Lists/FocusList/HipHop.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+            <Query>
+              <OrderBy>
+                <FieldRef Name="WM_ReleaseDate" />
+                <FieldRef Name="WM_Artist" />
+              </OrderBy>
+              <Where>
+                  <And>
+                    <Geq>
+                      <FieldRef Name="WM_ReleaseDate" />
+                      <Value Type="DateTime">
+                        <Today />
+                      </Value>
+                    </Geq>
+                    <Contains>
+                      <FieldRef Name="WM_Genre" />
+                      <Value Type="Taxonomy">HipHop</Value>
+                    </Contains>
+                  </And>
+                  <Eq>
+                    <FieldRef Name="WM_Genre" />
+                    <Value Type="Text">German HipHop / Rap</Value>
+                  </Eq>
+              </Where>
+            </Query>
+            <ViewFields>
+              <FieldRef Name="WM_ReleaseDate" />
+              <FieldRef Name="WM_Year" />
+              <FieldRef Name="WM_KW" />
+              <FieldRef Name="WM_Artist" />
+              <FieldRef Name="Title" />
+              <FieldRef Name="WM_Configration" />
+              <FieldRef Name="WM_MonthListeners" />
+              <FieldRef Name="WM_Genre" />
+              <FieldRef Name="WM_Label" />
+              <FieldRef Name="WM_LeadTerritory" />
+            </ViewFields>
+            <RowLimit Paged="TRUE">60</RowLimit>
+            <Aggregations Value="Off" />
+            <JSLink>clienttemplates.js</JSLink>
+            <ViewData />
+          </View>
 				  </pnp:Views>
 				<pnp:FieldRefs>
 					<pnp:FieldRef ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Required="false" />

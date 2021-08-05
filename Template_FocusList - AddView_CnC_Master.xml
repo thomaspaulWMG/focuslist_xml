@@ -4,14 +4,34 @@
   <pnp:Templates ID="CONTAINER-Warner_FocusList_Child">
     <pnp:ProvisioningTemplate ID="Warner_FocusList_CnC" Version="1.0">
 		<pnp:Lists>
-			<pnp:ListInstance Title="Focus List" OnQuickLaunch="true" TemplateType="100" Url="Lists/FocusList" RemoveExistingContentTypes="true" ContentTypesEnabled="true" EnableFolderCreation="false" >
+			<pnp:ListInstance Title="Focus List" OnQuickLaunch="false" TemplateType="100" Url="Lists/FocusList" RemoveExistingContentTypes="true" ContentTypesEnabled="true" EnableFolderCreation="false" >
 				<pnp:Views>
-                    <View Name="{CE4E491B-8872-4F46-82C5-0C64C2ED288A}" Type="HTML" DisplayName="Distribution Release Planner 2.0" Url="{site}/Lists/FocusList/CnC.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+					<View Name="{D6031D17-EA83-41F8-9FFB-721B60C85221}" Type="HTML" DisplayName="CuC_Master" Url="{site}/Lists/FocusList/CuC_Master.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
 						<Query>
 						  <OrderBy>
-							<FieldRef Name="WM_Year" />
-							<FieldRef Name="WM_KW" />
+							<FieldRef Name="WM_KWEndDate" />
+							<FieldRef Name="WM_Artist" />
 						  </OrderBy>
+						  <Where>
+							<And>
+								<Geq>
+									<FieldRef Name="WM_KWEndDate" />
+									<Value Type="DateTime">
+									  <Today />
+									</Value>
+								  </Geq>
+							  <Or>
+								<Eq>
+								  <FieldRef Name="WM_RepertoireUnit" />
+								  <Value Type="Taxonomy">Distributed</Value>
+								</Eq>
+								<Eq>
+								  <FieldRef Name="WM_RepertoireUnit" />
+								  <Value Type="Taxonomy">Catalogue</Value>
+								</Eq>
+							  </Or>
+							</And>
+						  </Where>
 						</Query>
 						<ViewFields>
 						  <FieldRef Name="WM_Year" />
@@ -20,23 +40,28 @@
 						  <FieldRef Name="Title" />
 						  <FieldRef Name="WM_ReleaseDate" />
 						  <FieldRef Name="WM_ReleaseDateComment" />
-						  <FieldRef Name="WM_Security" />
 						  <FieldRef Name="WM_Genre" />
 						  <FieldRef Name="WM_Configration" />
-						  <FieldRef Name="WM_Version" />
 						  <FieldRef Name="WM_Label" />
 						  <FieldRef Name="WM_GPID" />
+						  <FieldRef Name="WM_ISRC" />
+						  <FieldRef Name="WM_BrandManager" />
 						  <FieldRef Name="WM_ExAppleID" />
 						  <FieldRef Name="WM_ExAmazonID" />
-                          <FieldRef Name="WM_ExYouTubeID" />
+						  <FieldRef Name="WM_ExYouTubeID" />
 						  <FieldRef Name="WM_KatStreaming" />
-                          <!--<FieldRef Name="WM_FocusTrack" /> -->
-                          <FieldRef Name="WM_Hardfacts" />
-                          <FieldRef Name="WM_Softfacts" />
-                          <FieldRef Name="WM_ListeningLink" />
-                          <FieldRef Name="WM_PressShotLink" />
+						  <FieldRef Name="WM_FocusTrack" />
+						  <FieldRef Name="WM_Hardfacts" />
+						  <FieldRef Name="WM_Softfacts" />
+						  <FieldRef Name="WM_ListeningLink" />
+						  <FieldRef Name="WM_PressShotLink" />
+						  <FieldRef Name="WM_NotesINT" />
+						  <FieldRef Name="WM_Security" />
+						  <FieldRef Name="WM_Version" />
+						  <FieldRef Name="WM_PreOrder" />
+						  <FieldRef Name="WM_RepertoireUnit" />
 						</ViewFields>
-						<RowLimit Paged="TRUE">60</RowLimit>
+						<RowLimit Paged="TRUE">100</RowLimit>
 						<Aggregations Value="Off" />
 						<JSLink>clienttemplates.js</JSLink>
 						<ViewData />

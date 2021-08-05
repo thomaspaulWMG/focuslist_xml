@@ -14,7 +14,7 @@ Import-PnPTermGroupFromXml -Path c:\temp\termprod.xml
 Export-PnPListToProvisioningTemplate -Out c:\temp\focuslistDEV210113.xml -List "Focus List"
 
 ##ClientPage Type Change:
-$PageName = "Test-HWO"
+$PageName = "Domestic-Release-Planner"
 Set-PnPClientSidePage -Identity $PageName -LayoutType Home
 
 #Set Parameters

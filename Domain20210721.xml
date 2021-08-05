@@ -1,0 +1,685 @@
+<?xml version="1.0"?>
+<pnp:Provisioning xmlns:pnp="http://schemas.dev.office.com/PnP/2020/02/ProvisioningSchema">
+  <pnp:Preferences Generator="OfficeDevPnP.Core, Version=3.28.2012.0, Culture=neutral, PublicKeyToken=5e633289e95c321a" />
+  <pnp:Templates ID="CONTAINER-TEMPLATE-13EE07A323B94AD4B09A508860629911">
+    <pnp:ProvisioningTemplate ID="TEMPLATE-13EE07A323B94AD4B09A508860629911" Version="1" BaseSiteTemplate="STS#3" Scope="Web">
+      <pnp:Lists>
+        <pnp:ListInstance Title="Domain Inventory" Description="" DocumentTemplate="" TemplateType="100" Url="Lists/Domain Inventory" EnableVersioning="true" MinorVersionLimit="0" MaxVersionLimit="50" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-de22-43b2-a848-c05709900100" EnableFolderCreation="false" DefaultDisplayFormUrl="{site}/Lists/Domain Inventory/DispForm.aspx" DefaultEditFormUrl="{site}/Lists/Domain Inventory/EditForm.aspx" DefaultNewFormUrl="{site}/Lists/Domain Inventory/NewForm.aspx" ImageUrl="/_layouts/15/images/itgen.png?rev=47" IrmExpire="false" IrmReject="false" IsApplicationList="false" ValidationFormula="" ValidationMessage="">
+          <pnp:PropertyBagEntries>
+            <pnp:PropertyBagEntry Key="PowerAppFormProperties" Value="{&quot;AppId&quot;:&quot;c7180d84-7fd0-4df9-86f5-3a0b051fd152&quot;,&quot;AppRenderInfo&quot;:{&quot;PrimaryDeviceWidth&quot;:null,&quot;PrimaryDeviceHeight&quot;:null,&quot;BackgroundColor&quot;:null},&quot;AdditionalData&quot;:null,&quot;ContentTypeStates&quot;:{&quot;0x01000518B6DEAE6A8D4188965798A3105814&quot;:1},&quot;CacheInfo&quot;:{&quot;CachedFileUrlTemplate&quot;:null,&quot;Timestamp&quot;:null,&quot;AppFiles&quot;:null,&quot;ContentTag&quot;:0},&quot;Version&quot;:1}" Overwrite="false" />
+          </pnp:PropertyBagEntries>
+          <pnp:ContentTypeBindings>
+            <pnp:ContentTypeBinding ContentTypeID="0x01" Default="true" />
+            <pnp:ContentTypeBinding ContentTypeID="0x0120" />
+          </pnp:ContentTypeBindings>
+          <pnp:Views>
+            <View Name="{7D37A577-AD23-418D-B74A-4C3D4B820EC0}" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Items" Url="{site}/Lists/Domain Inventory/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+              <Query>
+                <GroupBy Collapse="TRUE" GroupLimit="30">
+                  <FieldRef Name="Terminate" />
+                </GroupBy>
+                <OrderBy>
+                  <FieldRef Name="ID" />
+                </OrderBy>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="Domain0" />
+                <FieldRef Name="Active" />
+                <FieldRef Name="Target" />
+                <FieldRef Name="Admin" />
+                <FieldRef Name="Artist" />
+                <FieldRef Name="DomainOwner" />
+                <FieldRef Name="Business_x0020_Unit" />
+                <FieldRef Name="InitialDate" />
+                <FieldRef Name="DateofExpiry" />
+                <FieldRef Name="Terminate" />
+                <FieldRef Name="Status" />
+                <FieldRef Name="Notes" />
+                <FieldRef Name="Modified" />
+                <FieldRef Name="Editor" />
+                <FieldRef Name="Agency" />
+                <FieldRef Name="CMS" />
+                <FieldRef Name="OneTrust" />
+                <FieldRef Name="Title" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <Aggregations Value="Off" />
+              <JSLink>clienttemplates.js</JSLink>
+              <CustomFormatter><![CDATA[{"additionalRowClass":{"operator":":","operands":[{"operator":"==","operands":[{"operator":"%","operands":["@rowIndex",2]},0]},"sp-css-backgroundColor-neutralBackground",{"operator":":","operands":[{"operator":"==","operands":[{"operator":"%","operands":["@rowIndex",2]},1]},"sp-css-backgroundColor-noFill",""]}]},"rowClassTemplateId":"BgColorAlternateRows"}]]></CustomFormatter>
+              <ViewData />
+            </View>
+            <View Name="{1B8A25A0-16BD-4949-BCEA-160CBB23AAEE}" Type="HTML" DisplayName="Business Unit" Url="{site}/Lists/Domain Inventory/Business Unit.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+              <Query>
+                <OrderBy>
+                  <FieldRef Name="ID" />
+                </OrderBy>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="Domain0" />
+                <FieldRef Name="InitialDate" />
+                <FieldRef Name="Month" />
+                <FieldRef Name="Active" />
+                <FieldRef Name="Terminate" />
+                <FieldRef Name="Target" />
+                <FieldRef Name="Admin" />
+                <FieldRef Name="Artist" />
+                <FieldRef Name="DomainOwner" />
+                <FieldRef Name="Business_x0020_Unit" />
+                <FieldRef Name="DateofExpiry" />
+                <FieldRef Name="Status" />
+                <FieldRef Name="hkhj" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <Aggregations Value="Off" />
+              <JSLink>clienttemplates.js</JSLink>
+              <CustomFormatter />
+              <ViewData />
+            </View>
+            <View Name="{4738EC08-7B3D-45B5-A761-86C802237B93}" Type="HTML" DisplayName="Artist" Url="{site}/Lists/Domain Inventory/Artist.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+              <Query>
+                <GroupBy Collapse="TRUE" GroupLimit="30">
+                  <FieldRef Name="Artist" />
+                </GroupBy>
+                <OrderBy>
+                  <FieldRef Name="Artist" Ascending="FALSE" />
+                </OrderBy>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="Domain0" />
+                <FieldRef Name="Active" />
+                <FieldRef Name="Target" />
+                <FieldRef Name="Admin" />
+                <FieldRef Name="Artist" />
+                <FieldRef Name="DomainOwner" />
+                <FieldRef Name="Business_x0020_Unit" />
+                <FieldRef Name="InitialDate" />
+                <FieldRef Name="DateofExpiry" />
+                <FieldRef Name="Terminate" />
+                <FieldRef Name="Status" />
+                <FieldRef Name="Notes" />
+                <FieldRef Name="Modified" />
+                <FieldRef Name="Editor" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <Aggregations Value="Off" />
+              <JSLink>clienttemplates.js</JSLink>
+              <ViewData />
+            </View>
+            <View Name="{FFBA1702-C129-4E85-ADEB-92982162C86D}" Type="HTML" DisplayName="All" Url="{site}/Lists/Domain Inventory/All.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+              <Query>
+                <OrderBy>
+                  <FieldRef Name="Domain0" />
+                </OrderBy>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="Active" />
+                <FieldRef Name="Domain0" />
+                <FieldRef Name="hkhj" />
+                <FieldRef Name="Target" />
+                <FieldRef Name="InitialDate" />
+                <FieldRef Name="Month" />
+                <FieldRef Name="Terminate" />
+                <FieldRef Name="Status" />
+                <FieldRef Name="Admin" />
+                <FieldRef Name="Agency" />
+                <FieldRef Name="CMS" />
+                <FieldRef Name="OneTrust" />
+                <FieldRef Name="Artist" />
+                <FieldRef Name="DomainOwner" />
+                <FieldRef Name="Business_x0020_Unit" />
+                <FieldRef Name="DateofExpiry" />
+                <FieldRef Name="Attachments" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <Aggregations Value="Off" />
+              <JSLink>clienttemplates.js</JSLink>
+              <ViewData />
+            </View>
+            <View Name="{2FCA216F-31E7-49BA-819E-283F4DF08B06}" DefaultView="TRUE" Type="HTML" DisplayName="Alle Eintraege" Url="{site}/Lists/Domain Inventory/Alle Eintraege.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+              <Query />
+              <ViewFields>
+                <FieldRef Name="Active" />
+                <FieldRef Name="Domain0" />
+                <FieldRef Name="hkhj" />
+                <FieldRef Name="Target" />
+                <FieldRef Name="Terminate" />
+                <FieldRef Name="Status" />
+                <FieldRef Name="Artist" />
+                <FieldRef Name="DateofExpiry" />
+                <FieldRef Name="Month" />
+                <FieldRef Name="Admin" />
+                <FieldRef Name="Agency" />
+                <FieldRef Name="CMS" />
+                <FieldRef Name="OneTrust" />
+                <FieldRef Name="DomainOwner" />
+                <FieldRef Name="Business_x0020_Unit" />
+                <FieldRef Name="InitialDate" />
+                <FieldRef Name="Notes" />
+                <FieldRef Name="Date" />
+                <FieldRef Name="ApprovalDate" />
+                <FieldRef Name="Approver" />
+                <FieldRef Name="Status_Approval" />
+                <FieldRef Name="Requested_x0020_by" />
+                <FieldRef Name="RequestDt" />
+                <FieldRef Name="DomainType" />
+                <FieldRef Name="Business_x0020_Owner" />
+                <FieldRef Name="Duration" />
+                <FieldRef Name="Web_development" />
+                <FieldRef Name="Project_Intake" />
+                <FieldRef Name="Approval_Comment" />
+                <FieldRef Name="Modified" />
+                <FieldRef Name="Created" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <Aggregations Value="Off" />
+              <JSLink>clienttemplates.js</JSLink>
+              <ViewData />
+            </View>
+            <View Name="{A332E678-F38D-4CA1-8660-2B1C1CEACA4C}" Type="HTML" DisplayName="Cleanup" Url="{site}/Lists/Domain Inventory/Cleanup.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+              <Query />
+              <ViewFields>
+                <FieldRef Name="Domain0" />
+                <FieldRef Name="hkhj" />
+                <FieldRef Name="Active" />
+                <FieldRef Name="Terminate" />
+                <FieldRef Name="Status" />
+                <FieldRef Name="Artist" />
+                <FieldRef Name="Business_x0020_Unit" />
+                <FieldRef Name="Admin" />
+                <FieldRef Name="Agency" />
+                <FieldRef Name="CMS" />
+                <FieldRef Name="OneTrust" />
+                <FieldRef Name="Date" />
+                <FieldRef Name="DateofExpiry" />
+                <FieldRef Name="DomainOwner" />
+                <FieldRef Name="InitialDate" />
+                <FieldRef Name="Month" />
+                <FieldRef Name="Notes" />
+                <FieldRef Name="Target" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <Aggregations Value="Off" />
+              <JSLink>clienttemplates.js</JSLink>
+              <ViewData />
+            </View>
+            <View Name="{9636FDA7-5B32-43F3-B53A-9FDF70B237AB}" Type="HTML" DisplayName="Active" Url="{site}/Lists/Domain Inventory/Active.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+              <Query>
+                <Where>
+                  <Eq>
+                    <FieldRef Name="Terminate" />
+                    <Value Type="Boolean">0</Value>
+                  </Eq>
+                </Where>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="Domain0" />
+                <FieldRef Name="hkhj" />
+                <FieldRef Name="Active" />
+                <FieldRef Name="Terminate" />
+                <FieldRef Name="Status" />
+                <FieldRef Name="Artist" />
+                <FieldRef Name="Business_x0020_Unit" />
+                <FieldRef Name="Admin" />
+                <FieldRef Name="Agency" />
+                <FieldRef Name="CMS" />
+                <FieldRef Name="OneTrust" />
+                <FieldRef Name="Date" />
+                <FieldRef Name="DateofExpiry" />
+                <FieldRef Name="DomainOwner" />
+                <FieldRef Name="InitialDate" />
+                <FieldRef Name="Month" />
+                <FieldRef Name="Notes" />
+                <FieldRef Name="Target" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+            </View>
+            <View Name="{6EAA5627-9222-4F0E-BCBE-EC235ED18298}" Type="HTML" DisplayName="Active unknown" Url="{site}/Lists/Domain Inventory/Active unknown.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+              <Query>
+                <Where>
+                  <And>
+                    <Eq>
+                      <FieldRef Name="Terminate" />
+                      <Value Type="Boolean">0</Value>
+                    </Eq>
+                    <Eq>
+                      <FieldRef Name="Business_x0020_Unit" />
+                      <Value Type="Choice">Unknown</Value>
+                    </Eq>
+                  </And>
+                </Where>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="Domain0" />
+                <FieldRef Name="Target" />
+                <FieldRef Name="Status" />
+                <FieldRef Name="Admin" />
+                <FieldRef Name="DateofExpiry" />
+                <FieldRef Name="DomainOwner" />
+                <FieldRef Name="InitialDate" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+            </View>
+            <View Name="{5421BBA1-0BDC-46D0-81D4-E5E8621C2CE9}" Type="HTML" DisplayName="Active Catalogue" Url="{site}/Lists/Domain Inventory/Active Catalogue.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+              <Query>
+                <Where>
+                  <And>
+                    <Eq>
+                      <FieldRef Name="Terminate" />
+                      <Value Type="Boolean">0</Value>
+                    </Eq>
+                    <Eq>
+                      <FieldRef Name="Business_x0020_Unit" />
+                      <Value Type="Choice">Catalogue</Value>
+                    </Eq>
+                  </And>
+                </Where>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="Domain0" />
+                <FieldRef Name="Target" />
+                <FieldRef Name="Active" />
+                <FieldRef Name="Terminate" />
+                <FieldRef Name="Status" />
+                <FieldRef Name="Artist" />
+                <FieldRef Name="Business_x0020_Unit" />
+                <FieldRef Name="DomainOwner" />
+                <FieldRef Name="Admin" />
+                <FieldRef Name="Agency" />
+                <FieldRef Name="CMS" />
+                <FieldRef Name="OneTrust" />
+                <FieldRef Name="InitialDate" />
+                <FieldRef Name="DateofExpiry" />
+                <FieldRef Name="Month" />
+                <FieldRef Name="Notes" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+            </View>
+            <View Name="{0FC1BD65-D2DD-496C-A7D8-A3E3D718B070}" Type="HTML" DisplayName="Active Classic &amp; Jazz" Url="{site}/Lists/Domain Inventory/Active Classic  Jazz.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+              <Query>
+                <Where>
+                  <And>
+                    <Eq>
+                      <FieldRef Name="Terminate" />
+                      <Value Type="Boolean">0</Value>
+                    </Eq>
+                    <Eq>
+                      <FieldRef Name="Business_x0020_Unit" />
+                      <Value Type="Choice">Classics &amp; Jazz</Value>
+                    </Eq>
+                  </And>
+                </Where>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="Domain0" />
+                <FieldRef Name="Target" />
+                <FieldRef Name="Active" />
+                <FieldRef Name="Status" />
+                <FieldRef Name="Artist" />
+                <FieldRef Name="Business_x0020_Unit" />
+                <FieldRef Name="DomainOwner" />
+                <FieldRef Name="Admin" />
+                <FieldRef Name="Agency" />
+                <FieldRef Name="CMS" />
+                <FieldRef Name="OneTrust" />
+                <FieldRef Name="Date" />
+                <FieldRef Name="DateofExpiry" />
+                <FieldRef Name="InitialDate" />
+                <FieldRef Name="Month" />
+                <FieldRef Name="Notes" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+            </View>
+            <View Name="{19200C80-A5F0-4432-AB9B-56ED5F88667A}" Type="HTML" DisplayName="Active Corporate" Url="{site}/Lists/Domain Inventory/Active Corporate.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+              <Query>
+                <Where>
+                  <And>
+                    <Eq>
+                      <FieldRef Name="Terminate" />
+                      <Value Type="Boolean">0</Value>
+                    </Eq>
+                    <Eq>
+                      <FieldRef Name="Business_x0020_Unit" />
+                      <Value Type="Choice">Corporate</Value>
+                    </Eq>
+                  </And>
+                </Where>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="Domain0" />
+                <FieldRef Name="Target" />
+                <FieldRef Name="Active" />
+                <FieldRef Name="Terminate" />
+                <FieldRef Name="Status" />
+                <FieldRef Name="Artist" />
+                <FieldRef Name="Business_x0020_Unit" />
+                <FieldRef Name="DomainOwner" />
+                <FieldRef Name="Admin" />
+                <FieldRef Name="Agency" />
+                <FieldRef Name="CMS" />
+                <FieldRef Name="OneTrust" />
+                <FieldRef Name="Date" />
+                <FieldRef Name="DateofExpiry" />
+                <FieldRef Name="InitialDate" />
+                <FieldRef Name="Month" />
+                <FieldRef Name="Notes" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+            </View>
+            <View Name="{93123B31-88A2-4DA3-8D0D-264B6FC1F3C9}" Type="HTML" DisplayName="Active Domestic" Url="{site}/Lists/Domain Inventory/Active Domestic.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+              <Query>
+                <Where>
+                  <And>
+                    <Eq>
+                      <FieldRef Name="Terminate" />
+                      <Value Type="Boolean">0</Value>
+                    </Eq>
+                    <Eq>
+                      <FieldRef Name="Business_x0020_Unit" />
+                      <Value Type="Choice">Domestic</Value>
+                    </Eq>
+                  </And>
+                </Where>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="Domain0" />
+                <FieldRef Name="Target" />
+                <FieldRef Name="Active" />
+                <FieldRef Name="Terminate" />
+                <FieldRef Name="Status" />
+                <FieldRef Name="Artist" />
+                <FieldRef Name="Business_x0020_Unit" />
+                <FieldRef Name="DomainOwner" />
+                <FieldRef Name="Admin" />
+                <FieldRef Name="Agency" />
+                <FieldRef Name="CMS" />
+                <FieldRef Name="OneTrust" />
+                <FieldRef Name="Date" />
+                <FieldRef Name="DateofExpiry" />
+                <FieldRef Name="InitialDate" />
+                <FieldRef Name="Month" />
+                <FieldRef Name="Notes" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+            </View>
+            <View Name="{79294F30-9BC6-42FB-8B25-5A648854C18E}" Type="HTML" DisplayName="Active International" Url="{site}/Lists/Domain Inventory/Active International.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+              <Query>
+                <Where>
+                  <And>
+                    <Eq>
+                      <FieldRef Name="Terminate" />
+                      <Value Type="Boolean">0</Value>
+                    </Eq>
+                    <Eq>
+                      <FieldRef Name="Business_x0020_Unit" />
+                      <Value Type="Choice">International</Value>
+                    </Eq>
+                  </And>
+                </Where>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="Domain0" />
+                <FieldRef Name="Target" />
+                <FieldRef Name="Active" />
+                <FieldRef Name="Terminate" />
+                <FieldRef Name="Status" />
+                <FieldRef Name="Artist" />
+                <FieldRef Name="Business_x0020_Unit" />
+                <FieldRef Name="DomainOwner" />
+                <FieldRef Name="Admin" />
+                <FieldRef Name="Agency" />
+                <FieldRef Name="CMS" />
+                <FieldRef Name="OneTrust" />
+                <FieldRef Name="Date" />
+                <FieldRef Name="DateofExpiry" />
+                <FieldRef Name="InitialDate" />
+                <FieldRef Name="Month" />
+                <FieldRef Name="Notes" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+            </View>
+            <View Name="{503212D4-A914-48DB-80A6-922308508BD2}" Type="HTML" DisplayName="Active Label Services" Url="{site}/Lists/Domain Inventory/Active Label Services.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+              <Query>
+                <Where>
+                  <And>
+                    <Eq>
+                      <FieldRef Name="Terminate" />
+                      <Value Type="Boolean">0</Value>
+                    </Eq>
+                    <Eq>
+                      <FieldRef Name="Business_x0020_Unit" />
+                      <Value Type="Choice">Label Services</Value>
+                    </Eq>
+                  </And>
+                </Where>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="Domain0" />
+                <FieldRef Name="Target" />
+                <FieldRef Name="Active" />
+                <FieldRef Name="Terminate" />
+                <FieldRef Name="Status" />
+                <FieldRef Name="Artist" />
+                <FieldRef Name="Business_x0020_Unit" />
+                <FieldRef Name="DomainOwner" />
+                <FieldRef Name="Admin" />
+                <FieldRef Name="Agency" />
+                <FieldRef Name="CMS" />
+                <FieldRef Name="OneTrust" />
+                <FieldRef Name="Date" />
+                <FieldRef Name="DateofExpiry" />
+                <FieldRef Name="InitialDate" />
+                <FieldRef Name="Month" />
+                <FieldRef Name="Notes" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+            </View>
+            <View Name="{569660F9-CC66-4A93-9511-E77CB44FA387}" Type="HTML" DisplayName="Active Merchandising &amp; Fashion" Url="{site}/Lists/Domain Inventory/Active Merchandising  Fashion.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+              <Query>
+                <Where>
+                  <And>
+                    <Eq>
+                      <FieldRef Name="Terminate" />
+                      <Value Type="Boolean">0</Value>
+                    </Eq>
+                    <Eq>
+                      <FieldRef Name="Business_x0020_Unit" />
+                      <Value Type="Choice">Merchandising &amp; Fashion</Value>
+                    </Eq>
+                  </And>
+                </Where>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="Domain0" />
+                <FieldRef Name="Target" />
+                <FieldRef Name="Active" />
+                <FieldRef Name="Terminate" />
+                <FieldRef Name="Status" />
+                <FieldRef Name="Artist" />
+                <FieldRef Name="Business_x0020_Unit" />
+                <FieldRef Name="DomainOwner" />
+                <FieldRef Name="Admin" />
+                <FieldRef Name="Agency" />
+                <FieldRef Name="CMS" />
+                <FieldRef Name="OneTrust" />
+                <FieldRef Name="Date" />
+                <FieldRef Name="DateofExpiry" />
+                <FieldRef Name="InitialDate" />
+                <FieldRef Name="Month" />
+                <FieldRef Name="Notes" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+            </View>
+            <View Name="{99E0D8AB-B5BD-459C-975B-FF21E50E0525}" Type="HTML" DisplayName="Active Other" Url="{site}/Lists/Domain Inventory/Active Other.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+              <Query>
+                <Where>
+                  <And>
+                    <Eq>
+                      <FieldRef Name="Terminate" />
+                      <Value Type="Boolean">0</Value>
+                    </Eq>
+                    <Eq>
+                      <FieldRef Name="Business_x0020_Unit" />
+                      <Value Type="Choice">Other</Value>
+                    </Eq>
+                  </And>
+                </Where>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="Domain0" />
+                <FieldRef Name="Target" />
+                <FieldRef Name="Active" />
+                <FieldRef Name="Terminate" />
+                <FieldRef Name="Status" />
+                <FieldRef Name="Artist" />
+                <FieldRef Name="Business_x0020_Unit" />
+                <FieldRef Name="DomainOwner" />
+                <FieldRef Name="Admin" />
+                <FieldRef Name="Agency" />
+                <FieldRef Name="CMS" />
+                <FieldRef Name="OneTrust" />
+                <FieldRef Name="Date" />
+                <FieldRef Name="DateofExpiry" />
+                <FieldRef Name="InitialDate" />
+                <FieldRef Name="Month" />
+                <FieldRef Name="Notes" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+            </View>
+            <View Name="{B1A298A9-BE3A-4A76-BDBE-BB08EB1D1EA8}" Type="HTML" DisplayName="Active Paid &amp; Owned Media" Url="{site}/Lists/Domain Inventory/Active Paid  Owned Media.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+              <Query>
+                <Where>
+                  <And>
+                    <Eq>
+                      <FieldRef Name="Terminate" />
+                      <Value Type="Boolean">0</Value>
+                    </Eq>
+                    <Eq>
+                      <FieldRef Name="Business_x0020_Unit" />
+                      <Value Type="Choice">Paid &amp; Owned Media</Value>
+                    </Eq>
+                  </And>
+                </Where>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="Domain0" />
+                <FieldRef Name="Target" />
+                <FieldRef Name="Active" />
+                <FieldRef Name="Terminate" />
+                <FieldRef Name="Status" />
+                <FieldRef Name="Business_x0020_Unit" />
+                <FieldRef Name="DomainOwner" />
+                <FieldRef Name="Admin" />
+                <FieldRef Name="Agency" />
+                <FieldRef Name="CMS" />
+                <FieldRef Name="OneTrust" />
+                <FieldRef Name="Date" />
+                <FieldRef Name="DateofExpiry" />
+                <FieldRef Name="InitialDate" />
+                <FieldRef Name="Month" />
+                <FieldRef Name="Notes" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+            </View>
+          </pnp:Views>
+          <pnp:Fields>
+            <Field Description="Business Owner" DisplayName="Domain Owner" Format="Dropdown" List="UserInfo" Name="DomainOwner" Title="Domain Owner" Type="User" UserSelectionMode="0" UserSelectionScope="0" ID="{df9d92d1-fd1e-4115-bdd1-364d6de7132d}" SourceID="{{listid:Domain Inventory}}" StaticName="DomainOwner" ColName="int2" RowOrdinal="0" />
+            <Field ClientSideComponentId="00000000-0000-0000-0000-000000000000" Description="Business Unit" DisplayName="Business Unit" FillInChoice="TRUE" Format="Dropdown" Name="Business_x0020_Unit" Title="Business Unit" Type="Choice" ID="{8c7d0745-1ca9-4dc8-8c36-5c76fbf544a4}" Version="6" StaticName="Business_x0020_Unit" SourceID="{{listid:Domain Inventory}}" ColName="nvarchar6" RowOrdinal="0" CustomFormatter="" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE">
+              <CHOICES>
+                <CHOICE>Catalogue</CHOICE>
+                <CHOICE>Classics &amp; Jazz</CHOICE>
+                <CHOICE>Corporate</CHOICE>
+                <CHOICE>Domestic</CHOICE>
+                <CHOICE>Insights &amp; Planning</CHOICE>
+                <CHOICE>International</CHOICE>
+                <CHOICE>Label Services</CHOICE>
+                <CHOICE>Merchandising &amp; Fashion</CHOICE>
+                <CHOICE>Other</CHOICE>
+                <CHOICE>Paid &amp; Owned Media</CHOICE>
+                <CHOICE>PMD</CHOICE>
+                <CHOICE>Unknown</CHOICE>
+              </CHOICES>
+              <Default>Catalogue</Default>
+            </Field>
+            <Field DisplayName="Date of Expiry" FriendlyDisplayFormat="Disabled" Format="DateOnly" Name="DateofExpiry" Title="Date of Expiry" Type="DateTime" ID="{f196f0f9-2d94-4f6d-b96a-6a8dfe97e72f}" SourceID="{{listid:Domain Inventory}}" StaticName="DateofExpiry" ColName="datetime1" RowOrdinal="0" />
+            <Field DisplayName="Status" Format="Dropdown" MaxLength="255" Name="Status" Title="Status" Type="Text" ID="{776e2e48-b7da-43c7-990c-eb6331b03d00}" SourceID="{{listid:Domain Inventory}}" StaticName="Status" ColName="nvarchar7" RowOrdinal="0" />
+            <Field Description="Artist Domain" DisplayName="Artist" Format="Dropdown" Name="Artist" Title="Artist" Type="Boolean" ID="{fcf2b2d5-1ed0-405d-b144-8d2c8457897d}" SourceID="{{listid:Domain Inventory}}" StaticName="Artist" ColName="bit1" RowOrdinal="0">
+              <Default>1</Default>
+            </Field>
+            <Field DisplayName="Active" Format="Dropdown" Name="Active" Title="Active" Type="Boolean" ID="{31adb5d6-5c77-4714-a093-c960fbb22630}" SourceID="{{listid:Domain Inventory}}" StaticName="Active" ColName="bit2" RowOrdinal="0">
+              <Default>1</Default>
+            </Field>
+            <Field DisplayName="Terminate" Format="Dropdown" Name="Terminate" Title="Terminate" Type="Boolean" ID="{024a0bec-e451-4804-b658-e970fad2d2a8}" SourceID="{{listid:Domain Inventory}}" StaticName="Terminate" ColName="bit3" RowOrdinal="0">
+              <Default>0</Default>
+            </Field>
+            <Field AppendOnly="FALSE" DisplayName="Notes" Format="Dropdown" IsolateStyles="FALSE" Name="Notes" RichText="FALSE" RichTextMode="Compatible" Title="Notes" Type="Note" ID="{7d47e86f-e12a-43ad-b53c-f1e6f2620dad}" SourceID="{{listid:Domain Inventory}}" StaticName="Notes" ColName="ntext2" RowOrdinal="0" />
+            <Field DisplayName="Target" Format="Dropdown" MaxLength="255" Name="Target" Title="Target" Type="Text" ID="{0d8542d8-1bac-4906-8bab-637735f67494}" SourceID="{{listid:Domain Inventory}}" StaticName="Target" ColName="nvarchar4" RowOrdinal="0" />
+            <Field DisplayName="Domain" Format="Hyperlink" Name="Domain0" Title="Domain" Type="URL" ID="{5a783fa9-1256-41d4-87b1-8df9fec034eb}" SourceID="{{listid:Domain Inventory}}" StaticName="Domain0" ColName="nvarchar9" RowOrdinal="0" ColName2="nvarchar10" RowOrdinal2="0" Version="2" CustomFormatter="" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" />
+            <Field ClientSideComponentId="00000000-0000-0000-0000-000000000000" Description="Service Provider" DisplayName="Admin" FillInChoice="TRUE" Format="Dropdown" Name="Admin" Title="Admin" Type="Choice" ID="{2d1e9b8b-b1f2-4914-ba3a-1eb148dd7bbd}" Version="7" StaticName="Admin" SourceID="{{listid:Domain Inventory}}" ColName="nvarchar5" RowOrdinal="0" CustomFormatter="" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE">
+              <CHOICES>
+                <CHOICE>CSC</CHOICE>
+                <CHOICE>Footprint</CHOICE>
+                <CHOICE>Warnermedia</CHOICE>
+                <CHOICE>Artist</CHOICE>
+              </CHOICES>
+            </Field>
+            <Field Type="Choice" DisplayName="Agency" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="Dropdown" FillInChoice="TRUE" ID="{89307401-e2ad-4f19-9cd3-378a5fe81807}" SourceID="{{listid:Domain Inventory}}" StaticName="Agency" Name="Agency" ColName="nvarchar11" RowOrdinal="0" CustomFormatter="" Version="1">
+              <CHOICES>
+                <CHOICE>Rendel</CHOICE>
+                <CHOICE>undPaul</CHOICE>
+                <CHOICE>noAgency</CHOICE>
+              </CHOICES>
+            </Field>
+            <Field Type="Choice" DisplayName="CMS" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="Dropdown" FillInChoice="TRUE" ID="{7904c5a0-aa3c-4f93-ac36-a458eb18fb70}" SourceID="{{listid:Domain Inventory}}" StaticName="CMS" Name="CMS" ColName="nvarchar12" RowOrdinal="0">
+              <CHOICES>
+                <CHOICE>Wordpress</CHOICE>
+                <CHOICE>Drupal</CHOICE>
+                <CHOICE>OnePage</CHOICE>
+              </CHOICES>
+            </Field>
+            <Field Type="Boolean" DisplayName="OneTrust" EnforceUniqueValues="FALSE" Indexed="FALSE" ID="{eb2d1241-205c-4db8-9dcb-01733d55745b}" SourceID="{{listid:Domain Inventory}}" StaticName="OneTrust" Name="OneTrust" ColName="bit4" RowOrdinal="0">
+              <Default>1</Default>
+            </Field>
+            <Field Description="Initiales Datum der Erstverfügbarkeit der Domain" DisplayName="Initial Date" FriendlyDisplayFormat="Disabled" Format="DateOnly" Name="InitialDate" Title="Initial Date" Type="DateTime" ID="{88260779-674c-4ef6-a159-615dd39676fe}" SourceID="{{listid:Domain Inventory}}" StaticName="InitialDate" ColName="datetime2" RowOrdinal="0" />
+            <Field DisplayName="Month" Format="Dropdown" MaxLength="255" Name="Month" Title="Month" Type="Text" ID="{3cdc90f7-7810-4cc6-a9bd-aff939fb37de}" SourceID="{{listid:Domain Inventory}}" StaticName="Month" ColName="nvarchar8" RowOrdinal="0" />
+            <Field DisplayName="Date" FriendlyDisplayFormat="Disabled" Format="DateOnly" Name="Date" Title="Date" Type="DateTime" ID="{65d4f61a-477f-4ea3-b167-2b780ffa1bb1}" SourceID="{{listid:Domain Inventory}}" StaticName="Date" ColName="datetime3" RowOrdinal="0" />
+            <Field Name="hkhj" DisplayName="Text" Type="Text" ID="{3e9f96ae-01f8-4021-a1ae-0535372af1cb}" SourceID="{{listid:Domain Inventory}}" StaticName="hkhj" ColName="nvarchar13" RowOrdinal="0" Version="2" CustomFormatter="" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" />
+            <Field Type="DateTime" DisplayName="ApprovalDate" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="DateTime" FriendlyDisplayFormat="Disabled" ID="{611ed452-ea9c-4f0a-8291-960f56b6990f}" SourceID="{{listid:Domain Inventory}}" StaticName="ApprovalDate" Name="ApprovalDate" ColName="datetime4" RowOrdinal="0" CustomFormatter="" CalType="0" Version="2" />
+            <Field Type="User" DisplayName="Approver" List="UserInfo" Required="FALSE" EnforceUniqueValues="FALSE" ShowField="ImnName" UserSelectionMode="PeopleOnly" UserSelectionScope="0" ID="{671f8125-c775-4e36-8e3b-21436724499d}" SourceID="{{listid:Domain Inventory}}" StaticName="Approver" Name="Approver" ColName="int1" RowOrdinal="0" Group="" Version="1" />
+            <Field Type="Choice" DisplayName="Status_Approval" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="Dropdown" FillInChoice="FALSE" ID="{a155d9f4-335e-4aa7-a264-89360db12fc1}" SourceID="{{listid:Domain Inventory}}" StaticName="Status_Approval" Name="Status_Approval" ColName="nvarchar14" RowOrdinal="0" CustomFormatter="" Version="1">
+              <Default>requested</Default>
+              <CHOICES>
+                <CHOICE>requested</CHOICE>
+                <CHOICE>approved</CHOICE>
+                <CHOICE>approved and checked</CHOICE>
+              </CHOICES>
+            </Field>
+            <Field Type="User" DisplayName="Requested by" List="UserInfo" Required="FALSE" EnforceUniqueValues="FALSE" ShowField="ImnName" UserSelectionMode="PeopleOnly" UserSelectionScope="0" ID="{8b78b870-258d-4b52-9bc8-203559b4c4ce}" SourceID="{{listid:Domain Inventory}}" StaticName="Requested_x0020_by" Name="Requested_x0020_by" ColName="int3" RowOrdinal="0" />
+            <Field Type="DateTime" DisplayName="RequestDt" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="DateTime" FriendlyDisplayFormat="Disabled" ID="{ad09e4c7-3e12-4f66-adef-e2812b33ea98}" SourceID="{{listid:Domain Inventory}}" StaticName="RequestDt" Name="RequestDt" ColName="datetime5" RowOrdinal="0" CustomFormatter="" CalType="0" Version="1" />
+            <Field Type="Text" DisplayName="DomainType" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="50" ID="{95d941bb-f9ba-482f-9a39-79356ca6d666}" SourceID="{{listid:Domain Inventory}}" StaticName="DomainType" Name="DomainType" ColName="nvarchar16" RowOrdinal="0" CustomFormatter="" Version="1" />
+            <Field Type="Lookup" DisplayName="Business Owner" Required="FALSE" EnforceUniqueValues="FALSE" List="{listid:Business_Units}" ShowField="BusinessOwnerName" UnlimitedLengthInDocumentLibrary="FALSE" RelationshipDeleteBehavior="None" ID="{da3f24fa-40ea-4e7c-87bb-a957a80943f9}" SourceID="{{listid:Domain Inventory}}" StaticName="Business_x0020_Owner" Name="Business_x0020_Owner" ColName="int4" RowOrdinal="0" />
+            <Field Type="Text" DisplayName="Duration" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" ID="{114943a5-e093-480f-9db7-5711b929d4e4}" SourceID="{{listid:Domain Inventory}}" StaticName="Duration" Name="Duration" ColName="nvarchar15" RowOrdinal="0" />
+            <Field Type="Boolean" DisplayName="Web_development" EnforceUniqueValues="FALSE" Indexed="FALSE" ID="{567c5864-58d8-48f0-b4c4-9bc3e9037004}" SourceID="{{listid:Domain Inventory}}" StaticName="Web_development" Name="Web_development" ColName="bit5" RowOrdinal="0" CustomFormatter="" Required="FALSE" Version="1">
+              <Default>1</Default>
+            </Field>
+            <Field Type="Text" DisplayName="Project_Intake" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" ID="{b95f38f8-0bbe-436f-b8c1-27d4d518555b}" SourceID="{{listid:Domain Inventory}}" StaticName="Project_Intake" Name="Project_Intake" ColName="nvarchar17" RowOrdinal="0" CustomFormatter="" Version="1" />
+            <Field Type="Text" DisplayName="Approval_Comment" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" ID="{d1922319-66bc-4b9e-a0e6-83aede208386}" SourceID="{{listid:Domain Inventory}}" StaticName="Approval_Comment" Name="Approval_Comment" ColName="nvarchar18" RowOrdinal="0" CustomFormatter="" Version="1" />
+          </pnp:Fields>
+          <pnp:Webhooks>
+            <pnp:Webhook ServerNotificationUrl="https://southcentralus0.pushnp.svc.ms/notifications?token=9be51638-0b74-4ee9-8eb1-68a1c7472177" ExpiresInDays="1" />
+          </pnp:Webhooks>
+        </pnp:ListInstance>
+      </pnp:Lists>
+    </pnp:ProvisioningTemplate>
+  </pnp:Templates>
+</pnp:Provisioning>

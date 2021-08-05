@@ -32,8 +32,9 @@
 						  </Where>
 						</Query>
 						<ViewFields>
-						  <FieldRef Name="WM_ProjectCode" />
-						  <FieldRef Name="WM_DOM_FC" />
+						  <FieldRef Name="WM_Artist" />
+						  <FieldRef Name="Title" />
+						  <FieldRef Name="WM_ReleaseDate" />
 						  <FieldRef Name="WM_Labelcopy_CK" />
 						  <FieldRef Name="WM_Master_CK" />
 						  <FieldRef Name="WM_Cover_CK" />
@@ -41,10 +42,9 @@
 						  <FieldRef Name="WM_Dlvy_CK" />
 						  <FieldRef Name="WM_Cschedule_CK" />
 						  <FieldRef Name="WM_USschedule_CK" />
-						  <FieldRef Name="WM_ReleaseDate" />
+						  <FieldRef Name="WM_ProjectCode" />
+						  <FieldRef Name="WM_DOM_FC" />
 						  <FieldRef Name="WM_PreOrder" />
-						  <FieldRef Name="WM_Artist" />
-						  <FieldRef Name="Title" />
 						  <FieldRef Name="WM_Configration" />
 						  <FieldRef Name="WM_Version" />
 						  <FieldRef Name="WM_GPID" />
@@ -59,7 +59,7 @@
 						  <FieldRef Name="WM_Year" />
 						  <FieldRef Name="WM_KW" />
 						</ViewFields>
-						<RowLimit Paged="TRUE">60</RowLimit>
+						<RowLimit Paged="TRUE">150</RowLimit>
 						<Aggregations Value="Off" />
 						<JSLink>clienttemplates.js</JSLink>
 						<CustomFormatter>{
