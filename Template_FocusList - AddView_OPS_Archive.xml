@@ -2,11 +2,11 @@
 <pnp:Provisioning xmlns:pnp="http://schemas.dev.office.com/PnP/2018/05/ProvisioningSchema">
   <pnp:Preferences Generator="OfficeDevPnP.Core, Version=2.27.1806.0, Culture=neutral, PublicKeyToken=null" />
   <pnp:Templates ID="CONTAINER-Warner_FocusList_Child">
-    <pnp:ProvisioningTemplate ID="Warner_FocusList_OPS" Version="1.0">
+    <pnp:ProvisioningTemplate ID="Warner_FocusList_OPS_ARchive" Version="1.0">
 		<pnp:Lists>
-			<pnp:ListInstance Title="Focus List" OnQuickLaunch="false" TemplateType="100" Url="Lists/FocusList" RemoveExistingContentTypes="true" ContentTypesEnabled="true" EnableFolderCreation="false" >
+			<pnp:ListInstance Title="Focus List" OnQuickLaunch="true" TemplateType="100" Url="Lists/FocusList" RemoveExistingContentTypes="true" ContentTypesEnabled="true" EnableFolderCreation="false" >
 				<pnp:Views>
-          <View Name="{D9038063-E86E-411D-A9CE-D916EA8859CE}" DefaultView="TRUE" Type="HTML" DisplayName="OPS-Focus-Report-Streaming" Url="{site}/Lists/FocusList/Focus.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+                    <View Name="{1A457BCD-4DC4-436D-B3CE-CECD144239C9}" Type="HTML" DisplayName="OPS-Focus-Report-Streaming-Archive" Url="{site}/Lists/FocusList/Hist OPFocusReportStreamingTracks.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
             <Query>
               <OrderBy>
                 <FieldRef Name="WM_Year" />
@@ -18,12 +18,12 @@
                     <IsNotNull>
                       <FieldRef Name="WM_KatStreaming" />
                     </IsNotNull>
-                    <Geq>
-                      <FieldRef Name="WM_KWEndDate" />
-                      <Value Type="DateTime">
-                        <Today OffsetDays="-7" />
-                      </Value>
-                    </Geq>
+                    <Lt>
+                        <FieldRef Name="WM_KWEndDate" />
+                        <Value Type="DateTime">
+                          <Today OffsetDays="-7" />
+                        </Value>
+                    </Lt>
                   </And>
                   <Neq>
                     <FieldRef Name="WM_KatStreaming" />

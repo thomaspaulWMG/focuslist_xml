@@ -4,35 +4,47 @@
   <pnp:Templates ID="CONTAINER-Warner_FocusList_Child">
     <pnp:ProvisioningTemplate ID="Warner_FocusList_MPNalltime" Version="1.0">
 		<pnp:Lists>
-			<pnp:ListInstance Title="Focus List" OnQuickLaunch="true" TemplateType="100" Url="Lists/FocusList" RemoveExistingContentTypes="true" ContentTypesEnabled="true" EnableFolderCreation="false" >
+			<pnp:ListInstance Title="Focus List" OnQuickLaunch="false" TemplateType="100" Url="Lists/FocusList" EnableVersioning="true" MinorVersionLimit="0" MaxVersionLimit="50" DraftVersionVisibility="0" RemoveExistingContentTypes="true" ContentTypesEnabled="true" EnableFolderCreation="false" >
 				<pnp:Views>
-                    <View Name="{BA7C36B0-B078-4F17-8262-7F08FE1644DF}" Type="HTML" DisplayName="MPN Sampling all" Url="{site}/Lists/FocusList/MPN_Sampling_all.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
-                        <ViewFields>
-                          <FieldRef Name="WM_Year" />
-                          <FieldRef Name="WM_KW" />
-                          <FieldRef Name="WM_RepertoireUnit" />
-                          <FieldRef Name="WM_ReleaseDate" />
-                          <FieldRef Name="WM_AirDt" />
-                          <FieldRef Name="WM_ReleaseDateComment" />
-                          <FieldRef Name="WM_Artist" />
-                          <FieldRef Name="Title" />
-                          <FieldRef Name="WM_Configration" />
-                          <FieldRef Name="WM_Security" />
-                          <FieldRef Name="WM_BrandManager" />
-                          <FieldRef Name="WM_LinkStorybox" />
-                          <FieldRef Name="WM_KatRadio" />
-                          <FieldRef Name="WM_GPID" />
-                          <FieldRef Name="WM_ISRC" />
-                          <FieldRef Name="WM_MPN_Comments" />
-                          <FieldRef Name="WM_MPN_Status" />
-                          <FieldRef Name="WM_MPNTimed_Dt" />
-                          <FieldRef Name="WM_MPN_Sampling" />
-                        </ViewFields>
-                        <RowLimit Paged="TRUE">60</RowLimit>
-                        <Aggregations Value="Off" />
-                        <JSLink>clienttemplates.js</JSLink>
-                        <ViewData />
-                      </View>
+          <View Name="{8ACAE314-6992-4CA7-B176-A76BFFB0D63A}" Type="HTML" DisplayName="MPN Sampling alltime" Url="{site}/Lists/FocusList/MPN Sampling alltime.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+            <Query>
+              <OrderBy>
+                <FieldRef Name="WM_ReleaseDate" Ascending="FALSE" />
+                <FieldRef Name="WM_Artist" />
+              </OrderBy>
+              <Where>
+                <Eq>
+                  <FieldRef Name="WM_MPN_Sampling" />
+                  <Value Type="Boolean">1</Value>
+                </Eq>
+              </Where>
+            </Query>
+            <ViewFields>
+              <FieldRef Name="WM_Year" />
+              <FieldRef Name="WM_KW" />
+              <FieldRef Name="WM_RepertoireUnit" />
+              <FieldRef Name="WM_ReleaseDate" />
+              <FieldRef Name="WM_AirDt" />
+              <FieldRef Name="WM_ReleaseDateComment" />
+              <FieldRef Name="WM_Artist" />
+              <FieldRef Name="Title" />
+              <FieldRef Name="WM_Configration" />
+              <FieldRef Name="WM_Security" />
+              <FieldRef Name="WM_BrandManager" />
+              <FieldRef Name="WM_LinkStorybox" />
+              <FieldRef Name="WM_KatRadio" />
+              <FieldRef Name="WM_GPID" />
+              <FieldRef Name="WM_ISRC" />
+              <FieldRef Name="WM_MPN_Comments" />
+              <FieldRef Name="WM_MPN_Status" />
+              <FieldRef Name="WM_MPNTimed_Dt" />
+              <FieldRef Name="WM_MPN_Sampling" />
+            </ViewFields>
+            <RowLimit Paged="TRUE">60</RowLimit>
+            <Aggregations Value="Off" />
+            <JSLink>clienttemplates.js</JSLink>
+            <ViewData />
+          </View>
 				  </pnp:Views>
 				<pnp:FieldRefs>
 					<pnp:FieldRef ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Required="false" />

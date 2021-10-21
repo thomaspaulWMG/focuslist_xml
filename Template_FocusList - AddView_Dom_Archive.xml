@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<pnp:Provisioning xmlns:pnp="http://schemas.dev.office.com/PnP/2018/05/ProvisioningSchema">
+  <pnp:Preferences Generator="OfficeDevPnP.Core, Version=2.27.1806.0, Culture=neutral, PublicKeyToken=null" />
+  <pnp:Templates ID="CONTAINER-Warner_FocusList_Child">
+    <pnp:ProvisioningTemplate ID="Warner_FocusList_MPN" Version="1.0">
+		<pnp:Lists>
+			<pnp:ListInstance Title="Focus List" OnQuickLaunch="false" TemplateType="100" Url="Lists/FocusList" EnableVersioning="true" MinorVersionLimit="0" MaxVersionLimit="50" DraftVersionVisibility="0" RemoveExistingContentTypes="true" ContentTypesEnabled="true" EnableFolderCreation="false" >
+				<pnp:Views>
+                    <View Name="{E42109F2-78D5-44C4-841D-8A8B4FEA0C76}" Type="HTML" DisplayName="DOM-KatList_Archive" Url="{site}/Lists/FocusList/DOMKatList_Archive.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+                        <Query>
+                          <OrderBy>
+                            <FieldRef Name="SortierDOM" Ascending="FALSE" />
+                          </OrderBy>
+                          <Where>
+                            <And>
+                              <And>
+                                <And>
+                                  <Eq>
+                                    <FieldRef Name="WM_RepertoireUnit" />
+                                    <Value Type="Text">Domestic</Value>
+                                  </Eq>
+                                  <Lt>
+                                    <FieldRef Name="WM_KWEndDate" />
+                                    <Value Type="DateTime">
+                                      <Today OffsetDays="-7" />
+                                    </Value>
+                                  </Lt>
+                                </And>
+                                <Neq>
+                                  <FieldRef Name="WM_Configration" />
+                                  <Value Type="Text">digi: Video</Value>
+                                </Neq>
+                              </And>
+                              <Neq>
+                                <FieldRef Name="WM_Label" />
+                                <Value Type="Text">Mentalo / Spinnin'</Value>
+                              </Neq>
+                            </And>
+                          </Where>
+                        </Query>
+                        <ViewFields>
+                            <FieldRef Name="WM_Artist" />
+                            <FieldRef Name="Title" />
+                            <FieldRef Name="WM_ReleaseDate" />
+                            <FieldRef Name="WM_Labelcopy_CK" />
+                            <FieldRef Name="WM_Master_CK" />
+                            <FieldRef Name="WM_Cover_CK" />
+                            <FieldRef Name="WM_Releasereq_CK" />
+                            <FieldRef Name="WM_Dlvy_CK" />
+                            <FieldRef Name="WM_Cschedule_CK" />
+                            <FieldRef Name="WM_USschedule_CK" />
+                            <FieldRef Name="WM_GPID" />
+                            <FieldRef Name="WM_Configration" />
+                            <FieldRef Name="WM_Version" />
+                            <FieldRef Name="WM_PreOrder" />
+                            <FieldRef Name="WWM_price" />
+                            <FieldRef Name="WM_Genre" />
+                            <FieldRef Name="WM_ProjectCode" />
+                            <FieldRef Name="WM_DOM_FC" />
+                            <FieldRef Name="WM_ProdGrp" />
+                            <FieldRef Name="WM_FirstOrd" />
+                            <FieldRef Name="WM_COP" />
+                            <FieldRef Name="WM_KatMarketing" />
+                            <FieldRef Name="WM_NotesINT" />
+                            <FieldRef Name="WM_TakeDown" />
+                            <FieldRef Name="WM_Label" />
+                            <FieldRef Name="WM_ISRC" />
+                            <FieldRef Name="WM_Year" />
+                            <FieldRef Name="WM_KW" />
+                            <FieldRef Name="SortierDOM" />
+                            <FieldRef Name="ID" />
+                          </ViewFields>
+                        <RowLimit Paged="TRUE">150</RowLimit>
+                        <Aggregations Value="Off" />
+                        <JSLink>clienttemplates.js</JSLink>
+                        <ViewData />
+                      </View>
+				  </pnp:Views>
+				<pnp:FieldRefs>
+					<pnp:FieldRef ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Required="false" />
+				</pnp:FieldRefs>
+			</pnp:ListInstance>
+		</pnp:Lists>
+    </pnp:ProvisioningTemplate>
+  </pnp:Templates>
+</pnp:Provisioning>
