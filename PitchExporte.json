@@ -1,0 +1,62 @@
+//Youtube Deezer Napster
+{
+    "WM_ReleaseDate": null,
+    "Territory": "DE, AT, CH",
+    "WM_Label": null,
+    "Distro": "WMG",
+    "WM_KatStreaming": null,
+    "WM_Configration": null,
+    "WM_Artist": null,
+    "Title": null,
+    "Fokustrack": "",
+    "WM_Genre": null,
+    "Mood": "",
+    "WM_ListeningLink": null,
+    "WM_GPID": null,
+    "playlist suggestions": "",
+    "WM_Softfacts": null,
+    "WM_Hardfacts": null,
+    "WM_PressShotLink": null
+}
+
+//AMAZON:
+{
+    "Vendor": "WEAX",
+    "WM_ReleaseDate": null,
+    "WM_Configration": null,
+    "Video Assets": "",
+    "Audio Quality": "",
+    "WM_GPID": null,
+    "WM_Artist": null,
+    "Title": null,
+    "WM_FocusTrack": null,
+    "WM_ISRC": null,
+    "WM_Genre": null,
+    "WM_KatStreaming": null,
+    "Comment": "",
+    "WM_PressShotLink": null,
+    "Design Assets": "",
+    "WM_ReleaseDateComment": null,
+    "WM_Label": null
+}
+
+//Apple:
+{
+    "CONTENT TYPE": "Song oder Playlist",
+    "WM_Label": null,
+    "Content Provider ID": "2",
+    "WM_ExAppleID": null,
+    "WM_GPID": null,
+    "WM_Artist": null,
+    "Title": null,
+    "Media Type": "Music",
+    "WM_Genre": null,
+    "WM_Configration": null,
+    "WM_ReleaseDate": null,
+    "Type": "New Release",
+    "Group": "WMG",
+    "Storefronts": "DE, AT, CH",
+    "WM_Softfacts": null,
+    "WM_Hardfacts": null,
+    "WM_ReleaseDateComment": null
+}
