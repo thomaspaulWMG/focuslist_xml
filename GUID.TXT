@@ -38,7 +38,7 @@
 {ef69f034-f442-4408-aeec-93e2edea8261}Pitch Napster
 {53608eef-2800-49e1-aa89-4fd1a50345a6}Pitch Spotify
 {789b59e8-2121-4371-b162-8a3736fa39fb}Pitch YouTube
-{dd51b1b7-25c7-468f-808b-74725d6ac850}
+{dd51b1b7-25c7-468f-808b-74725d6ac850} MPN Sampling all
 {a66467fc-6c43-47ef-adb5-74630c915c5b}
 {ceaa4772-99eb-4948-a98b-e56d2571ef40}
 {fed863db-7989-4d59-bac9-03aef69356c2}

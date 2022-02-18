@@ -1,0 +1,58 @@
+<View Name="{B2857804-9CF0-4C57-898B-A593ECED62CB}" Type="HTML" DisplayName="CuC_Master_Archive" Url="{site}/Lists/FocusList/CuC_Master_Archive.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+    <Query>
+        <Where>
+          <And>
+            <Geq>
+              <FieldRef Name="WM_KWEndDate" />
+              <Value Type="DateTime">
+                <Today />
+              </Value>
+            </Geq>
+            <Or>
+              <Eq>
+                <FieldRef Name="WM_RepertoireUnit" />
+                <Value Type="Taxonomy">Distributed</Value>
+              </Eq>
+              <Eq>
+                <FieldRef Name="WM_RepertoireUnit" />
+                <Value Type="Taxonomy">Catalogue</Value>
+              </Eq>
+            </Or>
+          </And>
+        </Where>
+        <OrderBy>
+          <FieldRef Name="WM_KWEndDate" />
+          <FieldRef Name="WM_Artist" />
+        </OrderBy>
+      </Query>
+      <ViewFields>
+        <FieldRef Name="WM_Year" />
+        <FieldRef Name="WM_KW" />
+        <FieldRef Name="WM_Artist" />
+        <FieldRef Name="Title" />
+        <FieldRef Name="WM_ReleaseDate" />
+        <FieldRef Name="WM_ReleaseDateComment" />
+        <FieldRef Name="WM_Genre" />
+        <FieldRef Name="WM_Configration" />
+        <FieldRef Name="WM_Label" />
+        <FieldRef Name="WM_GPID" />
+        <FieldRef Name="WM_ISRC" />
+        <FieldRef Name="WM_BrandManager" />
+        <FieldRef Name="WM_ExAppleID" />
+        <FieldRef Name="WM_ExAmazonID" />
+        <FieldRef Name="WM_ExYouTubeID" />
+        <FieldRef Name="WM_KatStreaming" />
+        <FieldRef Name="WM_FocusTrack" />
+        <FieldRef Name="WM_Hardfacts" />
+        <FieldRef Name="WM_Softfacts" />
+        <FieldRef Name="WM_ListeningLink" />
+        <FieldRef Name="WM_PressShotLink" />
+        <FieldRef Name="WM_NotesINT" />
+        <FieldRef Name="WM_Security" />
+        <FieldRef Name="WM_Version" />
+        <FieldRef Name="WM_PreOrder" />
+        <FieldRef Name="WM_RepertoireUnit" />
+        <FieldRef Name="WM_Readyness" />
+        <FieldRef Name="WM_DolbyAtmos" />
+      </ViewFields>
+  </View>

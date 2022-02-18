@@ -1,0 +1,559 @@
+$JsonFormatting = @"
+{"elmType":"div","style":{"box-sizing":"border-box","padding":"0 2px"},"attributes":{"class":{"operator":":","operands":[{"operator":"==","operands":["@currentField","A"]},"sp-css-backgroundColor-successBackground40",{"operator":":","operands":[{"operator":"==","operands":["@currentField","B"]},"sp-css-backgroundColor-warningBackground40",{"operator":":","operands":[{"operator":"==","operands":["@currentField","C"]},"sp-css-backgroundColor-blockingBackground40",{"operator":":","operands":[{"operator":"==","operands":["@currentField","D"]},"sp-css-backgroundColor-errorBackground40",""]}]}]}]}},"children":[{"elmType":"span","style":{"line-height":"16px","height":"14px"},"attributes":{"iconName":{"operator":":","operands":[{"operator":"==","operands":["@currentField","A"]},"",{"operator":":","operands":[{"operator":"==","operands":["@currentField","B"]},"",{"operator":":","operands":[{"operator":"==","operands":["@currentField","C"]},"",{"operator":":","operands":[{"operator":"==","operands":["@currentField","D"]},"",""]}]}]}]}}},{"elmType":"span","style":{"overflow":"hidden","text-overflow":"ellipsis","padding":"0 3px","width": "100%","text-align": "center"},"txtContent":"@currentField","attributes":{"class":{"operator":":","operands":[{"operator":"==","operands":["@currentField","A"]},"",{"operator":":","operands":[{"operator":"==","operands":["@currentField","B"]},"",{"operator":":","operands":[{"operator":"==","operands":["@currentField","C"]},"",{"operator":":","operands":[{"operator":"==","operands":["@currentField","D"]},"",""]}]}]}]}}}],"templateId":"BgColorChoice"}
+"@
+
+$Fields = @(
+	"2GLORY", 
+	"MARKETING",
+	"OWNED",
+	"PAID",
+	"PRINT/ONLINE",
+	"RADIO",
+	"STREAMING",
+	"TV")
+	
+foreach ($Field in $Fields){
+	Set-PnPField -Identity $Field -Values @{CustomFormatter = $JsonFormatting} -UpdateExistingLists
+}
+
+$JsonFormatting = @"
+{"elmType": "div","style": {"box-sizing": "border-box","padding": "0 2px"},"attributes": {"class": {"operator": ":","operands": [{"operator": "==","operands": ["@currentField","Ready"]},"sp-css-backgroundColor-successBackground50",{"operator": ":","operands": [{"operator": "==","operands": ["@currentField","partly ready"]},"sp-css-backgroundColor-warningBackground50",{"operator": ":","operands": [{"operator": "==","operands": ["@currentField","not ready"]},"sp-css-backgroundColor-blockingBackground50",""]}]}]}},"children": [{"elmType": "span","style": {"line-height": "16px","height": "14px"},"attributes": {"iconName": {"operator": ":","operands": [{"operator": "==","operands": ["@currentField","Ready"]},"",{"operator": ":","operands": [{"operator": "==","operands": ["@currentField","partly ready"]},"",{"operator": ":","operands": [{"operator": "==","operands": ["@currentField","not ready"]},"",""]}]}]}}},{"elmType": "span","style": {"overflow": "hidden","text-overflow": "ellipsis","padding": "0 3px"},"txtContent": "@currentField","attributes": {"class": {"operator": ":","operands": [{"operator": "==","operands": ["@currentField","Ready"]},"",{"operator": ":","operands": [{"operator": "==","operands": ["@currentField","partly ready"]},"",{"operator": ":","operands": [{"operator": "==","operands": ["@currentField","not ready"]},"",""]}]}]}}}]}
+"@
+
+Set-PnPField -Identity "Readyness" -Values @{CustomFormatter = $JsonFormatting} -UpdateExistingLists
+
+$JsonFormatting = @"
+{  "elmType": "div","style": {"box-sizing": "border-box","padding": "0 2px"},  "attributes": {    "class": {"operator": ":","operands": [{"operator": "==","operands": ["[`$WM_INTMeetings]","Streaming Meeting"]},"sp-css-backgroundColor-successBackground40",{"operator": ":","operands": [{"operator": "==","operands": ["[`$WM_INTMeetings]","International Music Meeting"]},"sp-css-backgroundColor-warningBackground40",""]}]}},"children": [{"elmType": "span","style": {"line-height": "16px","height": "14px"},"attributes": {"iconName": {"operator": ":","operands": [{"operator": "==","operands": ["[`$WM_INTMeetings]","Streaming Meeting"]},"",{"operator": ":","operands": [{"operator": "==","operands": ["[`$WM_INTMeetings]","International Music Meeting"]},"",""]}]}}},{"elmType": "span","style": {"overflow": "hidden","text-overflow": "ellipsis","padding": "0 3px"},"txtContent": "@currentField","attributes": {"class": {"operator": ":","operands": [{"operator": "==","operands": ["[`$WM_INTMeetings]","Streaming Meeting"]},"",{"operator": ":","operands": [{"operator": "==","operands": ["[`$WM_INTMeetings]","International Music Meeting"]},"",""]}]}}}]}
+"@
+
+$Fields = @(
+	"Artist", 
+	"Title")
+	
+foreach ($Field in $Fields){
+	Set-PnPField -Identity $Field -Values @{CustomFormatter = $JsonFormatting} -UpdateExistingLists
+}
+
+
+
+Status MPN Format
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
+    "elmType": "div",
+    "style": {
+      "box-sizing": "border-box",
+      "padding": "0 2px"
+    },
+    "attributes": {
+      "class": {
+        "operator": ":",
+        "operands": [
+          {
+            "operator": "&&",
+            "operands": [
+              {
+                "operator": "==",
+                "operands": [
+                  "[$WM_MPN_Sampling]",
+                  false
+                ]
+              },
+              {
+                "operator": "!=",
+                "operands": [
+                  "[$WM_MPN_Status]",
+                  ""
+                ]
+              }
+            ]
+          },
+          "sp-css-backgroundColor-errorBackground30",
+          ""
+        ]
+      }
+    },
+    "children": [
+      {
+        "elmType": "span",
+        "style": {
+          "line-height": "16px",
+          "height": "14px"
+        },
+        "attributes": {
+          "iconName": {
+            "operator": ":",
+            "operands": [
+              {
+                "operator": "&&",
+                "operands": [
+                  {
+                    "operator": "==",
+                    "operands": [
+                      "[$WM_MPN_Sampling]",
+                      false
+                    ]
+                  },
+                  {
+                    "operator": "!=",
+                    "operands": [
+                      "[$WM_MPN_Status]",
+                      ""
+                    ]
+                  }
+                ]
+              },
+              "",
+              ""
+            ]
+          }
+        }
+      },
+      {
+        "elmType": "span",
+        "style": {
+          "overflow": "hidden",
+          "text-overflow": "ellipsis",
+          "padding": "0 3px"
+        },
+        "txtContent": "[$WM_MPN_Status]",
+        "attributes": {
+          "class": {
+            "operator": ":",
+            "operands": [
+              {
+                "operator": "&&",
+                "operands": [
+                  {
+                    "operator": "==",
+                    "operands": [
+                      "[$WM_MPN_Sampling]",
+                      false
+                    ]
+                  },
+                  {
+                    "operator": "!=",
+                    "operands": [
+                      "[$WM_MPN_Status]",
+                      ""
+                    ]
+                  }
+                ]
+              },
+              "",
+              ""
+            ]
+          }
+        }
+      }
+    ]
+  }
+
+MPN Sampling Format
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
+    "elmType": "div",
+    "style": {
+      "box-sizing": "border-box",
+      "padding": "0 2px"
+    },
+    "attributes": {
+      "class": {
+        "operator": ":",
+        "operands": [
+          {
+            "operator": "&&",
+            "operands": [
+              {
+                "operator": "==",
+                "operands": [
+                  "[$WM_MPN_Sampling]",
+                  true
+                ]
+              },
+              {
+                "operator": "==",
+                "operands": [
+                  "[$WM_MPN_Status]",
+                  ""
+                ]
+              }
+            ]
+          },
+          "sp-css-backgroundColor-successBackground50",
+          ""
+        ]
+      }
+    },
+    "children": [
+      {
+        "elmType": "span",
+        "style": {
+          "line-height": "16px",
+          "height": "14px"
+        },
+        "attributes": {
+          "iconName": {
+            "operator": ":",
+            "operands": [
+              {
+                "operator": "&&",
+                "operands": [
+                  {
+                    "operator": "==",
+                    "operands": [
+                      "[$WM_MPN_Sampling]",
+                      true
+                    ]
+                  },
+                  {
+                    "operator": "==",
+                    "operands": [
+                      "[$WM_MPN_Status]",
+                      ""
+                    ]
+                  }
+                ]
+              },
+              "",
+              ""
+            ]
+          }
+        }
+      },
+      {
+        "elmType": "span",
+        "style": {
+          "overflow": "hidden",
+          "text-overflow": "ellipsis",
+          "padding": "0 3px"
+        },
+        "txtContent": "[$WM_MPN_Sampling.displayValue]",
+        "attributes": {
+          "class": {
+            "operator": ":",
+            "operands": [
+              {
+                "operator": "&&",
+                "operands": [
+                  {
+                    "operator": "==",
+                    "operands": [
+                      "[$WM_MPN_Sampling]",
+                      true
+                    ]
+                  },
+                  {
+                    "operator": "==",
+                    "operands": [
+                      "[$WM_MPN_Status]",
+                      ""
+                    ]
+                  }
+                ]
+              },
+              "",
+              ""
+            ]
+          }
+        }
+      }
+    ]
+  }
+
+MPN Timed Date
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
+    "elmType": "div",
+    "style": {
+      "box-sizing": "border-box",
+      "padding": "0 2px"
+    },
+    "attributes": {
+      "class": {
+        "operator": ":",
+        "operands": [
+          {
+            "operator": "!=",
+            "operands": [
+              {
+                "operator": "Date()",
+                "operands": [
+                  {
+                    "operator": "toDateString()",
+                    "operands": [
+                      {
+                        "operator": "Date()",
+                        "operands": [
+                          "[$WM_MPNTimed_Dt]"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "operator": "Date()",
+                "operands": [
+                  {
+                    "operator": "toDateString()",
+                    "operands": [
+                      {
+                        "operator": "Date()",
+                        "operands": [
+                            "[$WM_ReleaseDate]"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "sp-css-backgroundColor-errorBackground30",
+          ""
+        ]
+      }
+    },
+    "children": [
+      {
+        "elmType": "span",
+        "style": {
+          "line-height": "16px",
+          "height": "14px"
+        },
+        "attributes": {
+          "iconName": {
+            "operator": ":",
+            "operands": [
+              {
+                "operator": "!=",
+                "operands": [
+                  {
+                    "operator": "Date()",
+                    "operands": [
+                      {
+                        "operator": "toDateString()",
+                        "operands": [
+                          {
+                            "operator": "Date()",
+                            "operands": [
+                              "[$WM_MPNTimed_Dt]"
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "operator": "Date()",
+                    "operands": [
+                      {
+                        "operator": "toDateString()",
+                        "operands": [
+                          {
+                            "operator": "Date()",
+                            "operands": [
+                              "[$WM_ReleaseDate]"
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              "",
+              ""
+            ]
+          }
+        }
+      },
+      {
+        "elmType": "span",
+        "style": {
+          "overflow": "hidden",
+          "text-overflow": "ellipsis",
+          "padding": "0 3px"
+        },
+        "txtContent": "[$WM_MPNTimed_Dt.displayValue]",
+        "attributes": {
+          "class": {
+            "operator": ":",
+            "operands": [
+              {
+                "operator": "!=",
+                "operands": [
+                  {
+                    "operator": "Date()",
+                    "operands": [
+                      {
+                        "operator": "toDateString()",
+                        "operands": [
+                          {
+                            "operator": "Date()",
+                            "operands": [
+                              "[$WM_MPNTimed_Dt]"
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "operator": "Date()",
+                    "operands": [
+                      {
+                        "operator": "toDateString()",
+                        "operands": [
+                          {
+                            "operator": "Date()",
+                            "operands": [
+                              "[$WM_ReleaseDate]"
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              "",
+              ""
+            ]
+          }
+        }
+      }
+    ]
+  }
+
+  {
+    "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
+    "elmType": "div",
+    "txtContent": "@currentField",
+    "attributes": {
+      "class": "=if(@currentField == [$WM_ReleaseDate],'', 'sp-css-backgroundColor-blockingBackground50')"
+    }
+  }
+
+  {
+    "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
+    "elmType": "div",
+    "txtContent": "@currentField",
+    "attributes": {
+      "class": "=if(@currentField == if([$WM_AirDt]>0,[$WM_AirDt],[$WM_ReleaseDate]),'', 'sp-css-backgroundColor-blockingBackground50')"
+    }
+  }
+
+=if()
+
+
+  {
+    "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
+    "elmType": "div",
+    "style": {
+      "box-sizing": "border-box",
+      "padding": "0 2px"
+    },
+    "attributes": {
+      "class": {
+        "operator": ":",
+        "operands": [
+          {
+            "operator": "&&",
+            "operands": [
+              {
+                "operator": "==",
+                "operands": [
+                  "[$WM_MPN_Sampling]",
+                  true
+                ]
+              },
+              {
+                "operator": "==",
+                "operands": [
+                  "[$WM_MPN_Status]",
+                  ""
+                ]
+              }
+            ]
+          },
+          "sp-css-backgroundColor-successBackground50",
+          ""
+        ]
+      }
+    },
+    "children": [
+      {
+        "elmType": "span",
+        "style": {
+          "line-height": "16px",
+          "height": "14px"
+        },
+        "attributes": {
+          "iconName": {
+            "operator": ":",
+            "operands": [
+              {
+                "operator": "&&",
+                "operands": [
+                  {
+                    "operator": "==",
+                    "operands": [
+                      "[$WM_MPN_Sampling]",
+                      true
+                    ]
+                  },
+                  {
+                    "operator": "==",
+                    "operands": [
+                      "[$WM_MPN_Status]",
+                      ""
+                    ]
+                  }
+                ]
+              },
+              "",
+              ""
+            ]
+          }
+        }
+      },
+      {
+        "elmType": "span",
+        "style": {
+          "overflow": "hidden",
+          "text-overflow": "ellipsis",
+          "padding": "0 3px"
+        },
+        "txtContent": "[$WM_MPN_Sampling.displayValue]",
+        "attributes": {
+          "class": {
+            "operator": ":",
+            "operands": [
+              {
+                "operator": "&&",
+                "operands": [
+                  {
+                    "operator": "==",
+                    "operands": [
+                      "[$WM_MPN_Sampling]",
+                      true
+                    ]
+                  },
+                  {
+                    "operator": "==",
+                    "operands": [
+                      "[$WM_MPN_Status]",
+                      ""
+                    ]
+                  }
+                ]
+              },
+              "",
+              ""
+            ]
+          }
+        }
+      }
+    ]
+  }
