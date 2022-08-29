@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<pnp:Provisioning xmlns:pnp="http://schemas.dev.office.com/PnP/2018/05/ProvisioningSchema">
+  <pnp:Preferences Generator="OfficeDevPnP.Core, Version=2.27.1806.0, Culture=neutral, PublicKeyToken=null" />
+  <pnp:Templates ID="CONTAINER-Warner_FocusList_Child">
+    <pnp:ProvisioningTemplate ID="Warner_FocusList_MPN" Version="1.0">
+		<pnp:Lists>
+			<pnp:ListInstance Title="Focus List" OnQuickLaunch="false" TemplateType="100" Url="Lists/FocusList" EnableVersioning="true" MinorVersionLimit="0" MaxVersionLimit="50" DraftVersionVisibility="0" ContentTypesEnabled="true" >
+				<pnp:Views>
+          <View Name="{a2720bc6-5ae0-4b79-88af-58b473bf1c7c}" Type="HTML" DisplayName="MPN CH Sampling" Url="{site}/Lists/FocusList/MPN CH Sampling.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+            <Query>
+              <OrderBy>
+                <FieldRef Name="WM_ReleaseDate" />
+                <FieldRef Name="WM_Artist" />
+              </OrderBy>
+              <Where>
+                <And>
+                  <And>
+                    <Gt>
+                      <FieldRef Name="WM_KWEndDate" />
+                      <Value Type="DateTime">
+                        <Today />
+                      </Value>
+                    </Gt>
+                    <Lt>
+                      <FieldRef Name="WM_KWEndDate" />
+                      <Value Type="DateTime">
+                        <Today OffsetDays="14" />
+                      </Value>
+                    </Lt>
+                  </And>
+                  <Eq>
+                    <FieldRef Name="WM_MPN_Sampling" />
+                    <Value Type="Boolean">1</Value>
+                  </Eq>
+                </And>
+              </Where>
+            </Query>
+            <ViewFields>
+              <FieldRef Name="WM_Year" />
+              <FieldRef Name="WM_KW" />
+              <FieldRef Name="WM_RepertoireUnit" />
+              <FieldRef Name="WM_ReleaseDate" />
+              <FieldRef Name="WM_AirDt" />
+              <FieldRef Name="WM_ReleaseDateComment" />
+              <FieldRef Name="WM_Artist" />
+              <FieldRef Name="Title" />
+              <FieldRef Name="WM_Configration" />
+              <FieldRef Name="WM_Security" />
+              <FieldRef Name="WM_BrandManager" />
+              <FieldRef Name="WM_LinkStorybox" />
+              <FieldRef Name="WM_KatRadio" />
+              <FieldRef Name="WM_GPID" />
+              <FieldRef Name="WM_ISRC" />
+              <FieldRef Name="WM_MPN_Comments" />
+              <FieldRef Name="WM_MPN_Status" />
+              <FieldRef Name="WM_MPNTimed_Dt" />
+              <FieldRef Name="WM_MPN_Sampling" />
+            </ViewFields>
+            <RowLimit Paged="TRUE">60</RowLimit>
+            <Aggregations Value="Off" />
+            <JSLink>clienttemplates.js</JSLink>
+            <ViewData />
+          </View>
+				  </pnp:Views>
+				<pnp:FieldRefs>
+					<pnp:FieldRef ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Required="false" />
+				</pnp:FieldRefs>
+			</pnp:ListInstance>
+		</pnp:Lists>
+    </pnp:ProvisioningTemplate>
+  </pnp:Templates>
+</pnp:Provisioning>

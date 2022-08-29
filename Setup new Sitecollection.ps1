@@ -17,8 +17,6 @@ New-PnPTermSet -Name "Year" -TermGroup $termGroup -Id "0B98D864-3F71-4D10-9085-1
 New-PnPTermSet -Name "Label" -TermGroup $termGroup -Id "F9C9AC1C-9128-4C44-8C3C-8844ED2D9831" -Lcid "1033"
 
 
-Version 2
-New-PnPTermSet -Name "Status CnC" -TermGroup $termGroup -Id "21698922-CBF7-4FC5-A70B-70A31C3E1D33" -Lcid "1033"
 
 
 

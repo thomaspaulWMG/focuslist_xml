@@ -43,7 +43,7 @@ $templatePath = "C:\Users\thomaspaul\Warner Music Group\CE-FocusList - General\E
 $templatePath = "C:\Users\thomaspaul\Warner Music Group\CE-FocusList - General\Entwicklung\PS\Template_FocusList - AddView_Dom_Archive.xml"
 $templatePath = "C:\Users\thomaspaul\Warner Music Group\CE-FocusList - General\Entwicklung\PS\focuslistPRD20210726_import.xml"
 $templatePath = "C:\Users\thomaspaul\Warner Music Group\CE-FocusList - General\Entwicklung\PS\Template_FocusList - AddView INT Archive.xml"
-$templatePath = "C:\Users\thomaspaul\Warner Music Group\CE-FocusList - General\Entwicklung\PS\Template_FocusList - AddView_CnC_Master_Archive.xml"
+$templatePath = "C:\Users\thomaspaul\OneDrive - Warner Music Group\Documents\GitHub\focuslist_xml\Template_FocusList - AddView_CnC_Master_Archive.xml"
 $templatePath = "C:\Users\thomaspaul\Warner Music Group\CE-FocusList - General\Entwicklung\PS\View_CuC_Master_Archive.xml"
 Get-PnPProvisioningTemplate -Out c:\temp\focuslist11.pnp
 Apply-PnPProvisioningTemplate -path $templatePath
@@ -71,7 +71,7 @@ Export-PnPTaxonomy -Path c:\temp\unit.txt -TermSetId 2557dadd-2147-4a9e-b2b6-f14
 
 Connect-PnPOnline -Url https://wmg.sharepoint.com -UseWebLogin
 
-Export-PnPListToProvisioningTemplate -Out "C:\Users\thomaspaul\Warner Music Group\CE-FocusList - General\Entwicklung\PS\focuslistPRD20220118.xml" -List "Focus List"
+Export-PnPListToProvisioningTemplate -Out "C:\Users\thomaspaul\OneDrive - Warner Music Group\Documents\GitHub\focuslist_xml\Sicherungen\focuslistPRD20220322.xml" -List "Focus List"
 Export-PnPListToProvisioningTemplate -Out c:\temp\focuslistField.xml -List "FocusList_Field"
 Export-PnPListToProvisioningTemplate -Out c:\temp\matrix.xml -List "FocusList_Matrix"
 

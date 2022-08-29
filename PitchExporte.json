@@ -40,7 +40,7 @@
     "WM_Label": null
 }
 
-//Apple:
+//Apple: alt
 {
     "CONTENT TYPE": "Song oder Playlist",
     "WM_Label": null,
@@ -49,7 +49,6 @@
     "WM_GPID": null,
     "WM_Artist": null,
     "Title": null,
-    "Media Type": "Music",
     "WM_Genre": null,
     "WM_Configration": null,
     "WM_ReleaseDate": null,
@@ -58,5 +57,31 @@
     "Storefronts": "DE, AT, CH",
     "WM_Softfacts": null,
     "WM_Hardfacts": null,
+    "WM_ReleaseDateComment": null,
+    "WM_Version": null
+}
+
+//Apple: neu
+{
+    "CONTENT TYPE": "Song oder Playlist",
+    "WM_Label": null,
+    "WM_ExAppleID": null,
+    "WM_GPID": null,
+    "WM_Artist": null,
+    "Title": null,
+    "WM_Genre": null,
+    "WM_Configration": null,
+    "WM_ReleaseDate": null,
+    "Type": "New Release",
+    "Storefronts": "DE, AT, CH",
+    "MOOD": "",
+    "CONTENT LANGUAGE": "",
+    "WM_Softfacts": null,
+    "WM_Hardfacts": null,
+    "WM_PressShotLink": null,
+    "WM_ListeningLink": null,
+    "WM_DolbyAtmos": null,
+    "MOTION ARTWORK": "",
+    "WM_Version": null,
     "WM_ReleaseDateComment": null
 }
