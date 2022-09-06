@@ -33,11 +33,14 @@
     "WM_ISRC": null,
     "WM_Genre": null,
     "WM_KatStreaming": null,
+    "WM_Label": null,
+    "WM_BrandManager": null,
     "Comment": "",
-    "WM_PressShotLink": null,
     "Design Assets": "",
+    "WM_ListeningLink": null,
+    "WM_PressShotLink": null,
     "WM_ReleaseDateComment": null,
-    "WM_Label": null
+    "WM_Version": null
 }
 
 //Apple: alt
