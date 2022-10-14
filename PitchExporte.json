@@ -88,3 +88,17 @@
     "WM_Version": null,
     "WM_ReleaseDateComment": null
 }
+
+
+//Spotify: neu
+{
+    "WM_KW": null,
+    "WM_KatStreaming": null,
+    "WM_Artist": null,
+    "Title": null,    
+    "WM_FocusTrack": null,
+    "WM_ReleaseDate": null,
+    "WM_Genre": null,
+    "WM_Label": null,
+    "WM_Configration": null
+}
